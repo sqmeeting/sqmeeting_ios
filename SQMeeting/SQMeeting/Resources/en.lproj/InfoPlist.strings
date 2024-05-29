@@ -1,0 +1,4 @@
+CFBundleDisplayName = "SQ MeetingCE";
+"NSCameraUsageDescription"="SQ MeetingCE will access your camera when you start meeting or join meetings.";
+"NSMicrophoneUsageDescription"="SQ MeetingCE will access your microphone when you start meeting or join meetings.";
+"NSPhotoLibraryUsageDescription"="SQ MeetingCE will access your photos when you start meeting or join meetings.";

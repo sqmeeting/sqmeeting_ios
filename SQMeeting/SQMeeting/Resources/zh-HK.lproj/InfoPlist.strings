@@ -1,0 +1,4 @@
+CFBundleDisplayName = "神旗CE";
+"NSCameraUsageDescription"="神旗CE將會在您使用發起或者加入會議功能時使用您的相機。";
+"NSMicrophoneUsageDescription"="神旗CE將會在您使用發起或者加入會議功能時使用您的麥克風。";
+"NSPhotoLibraryUsageDescription"="神旗CE將會在您使用發起或者加入會議功能時使用您的相冊。";

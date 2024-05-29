@@ -1,0 +1,6 @@
+framework module RtcCommon {
+  umbrella header "RtcCommon.h"
+  export *
+
+  module * { export * }
+}

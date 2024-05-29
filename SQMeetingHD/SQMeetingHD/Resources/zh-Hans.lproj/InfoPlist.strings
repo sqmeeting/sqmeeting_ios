@@ -1,0 +1,5 @@
+CFBundleDisplayName = "神旗HD CE";
+"NSCameraUsageDescription"="神旗HD CE将会在您使用发起或者加入会议功能时使用您的相机。";
+"NSMicrophoneUsageDescription"="神旗HD CE将会在您使用发起或者加入会议功能时使用您的麦克风。";
+"NSPhotoLibraryUsageDescription"="神旗HD CE将会在您使用发起或者加入会议功能时使用您的相册。";
+

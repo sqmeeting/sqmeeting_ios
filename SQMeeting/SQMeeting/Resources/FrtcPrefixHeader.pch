@@ -1,0 +1,23 @@
+//
+//  FrtcPrefixHeader.pch
+//  FrtcMeeting
+//
+//  Created by weiza on 2021/10/21.
+//  Copyright © 2021 FRTC Team. All rights reserved.
+//
+
+#ifndef FrtcPrefixHeader_pch
+#define FrtcPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import "FrtcHelpers.h"
+#import "FrtcMacro.h"
+
+#endif
+
+
+#endif /* FrtcPrefixHeader_pch */

@@ -1,0 +1,587 @@
+"app_displayname" = "神旗CE";
+"app_title" = "神旗CE";
+"video_call" = "视频会议";
+"audio_call" = "语音会议";
+"open_video" = "开启视频";
+"use_per_meetingn" ="使用个人会议号";
+"please_you_meetingN" = "请选择您的会议号";
+"home_or" = "或";
+"sign_in" = "登录";
+"meeting_id" = "会议号";
+"meeting_number_join" = "会议号加入";
+"new_meeting" = "即时会议";
+"schedule_meeting" = "预约会议";
+"start_meeting" = "开始会议";
+"history_meeting" = "历史会议";
+"history_meeting_null" = "无历史会议";
+"display_name" = "显示的名字";
+"clear_history" = "清除记录";
+"clear_history_detail" = "确定要清空历史会议记录吗?";
+"logout_notifica" = "下线通知";
+"login_again_notifica" = "验证失效,请重新登录后再入会";
+"meeting_psd" = "会议密码";
+"meeting_details" = "会议详情";
+"call_join" = "加入";
+"remember_name" = "记住名字";
+"phone_microphone" = "打开麦克风";
+"phone_camera" = "开启摄像头";
+"audio_only" = "语音会议";
+"audio_only_message" = "语音会议不能收发视频及屏幕共享";
+"please_password" = "请输入密码";
+"please_name" = "输入您的名字";
+"meeting_id_error" = "会议号码不能为空";
+"meeting_name_error" = "请输入一个你在会议中显示的名字";
+"call_ended" = "电话已挂断";
+"server_unreachable" = "入会失败: 请检查您的服务器地址";
+"meeting_locked" = "入会失败: 该会议已锁定，无法入会";
+"meeting_not_exist"= "入会失败: 该会议需要登录或会议不存在，请重试。";
+"app_settings" = "设置";
+"server_address" = "服务器地址";
+"server_setting" = "服务器设置";
+"server_saved" = "已保存设置";
+"phone_logs" = "日志";
+"app_version" = "版本信息";
+"version" = "版本";
+"version_unknown" = "未知";
+"phone_testing" = "仅供临时测试使用！";
+"phone_testing_title" = "测试专用设置";
+"phone_rate_notice" = "编辑此框会改变系统呼叫速率";
+"dialog_cancel" = "取消";
+"dialog_save" = "保存";
+"rate_limit" = "数值必须是0，或者介于64和2048之间";
+"user_name" = "显示姓名";
+"username_account" = "用户名/账号";
+"Account" = "账号";
+"update_password" = "更新密码";
+"login_success" = "登录成功";
+"user_name_empty" = "用户名不能为空";
+"user_psd_error" = "用户名或密码错误";
+"user_login_error00" = "登录时发生错误，请重新登录";
+"user_login_error01" = "多次输入错误账号被锁定，请五分钟后重试";
+"user_login_error02" = "账户已被锁定,请联系管理员解锁";
+"string_next" = "下一步";
+"set_ip" = "请先设置服务器地址";
+"set_ip_error" = "服务器地址不能为空";
+"user_not_exist" = "用户不存在";
+"admin_hint" = "这是管理员账户，请先在服务器页面更改密码以激活账户。";
+"string_ok" = "确定";
+"string_warning" = "警告";
+"pwd_empty" = "密码不能为空";
+"pwd_invalid" = "密码错误，请重试。";
+"string_pwd" = "密码";
+"remember_pwd" = "记住密码";
+"forget_pwd" = "忘记密码?";
+"user_account" = "个人信息";
+"sign_out_failed" = "退出登录失败";
+"sign_out" = "退出登录";
+"user_email" = "电子邮件";
+"user_first_name" = "名字";
+"user_last_name" = "姓氏";
+"pwd_limit_notice" = "密码至少为6位";
+"current_pwd" = "当前密码";
+"new_pwd" = "设置新密码";
+"invalid_error" = "错误，请重试。";
+"set_pwd" = "更改密码";
+"string_save" = "保存";
+"join_meeting" = "加入会议";
+"account_password_login" = "账号密码登录";
+"string_done" = "完成";
+"about_us" = "关于我们";
+"modify_name" = "修改用户名";
+"address_null_login" = "请先设置服务器地址再登录";
+"address_null" = "请先设置服务器地址";
+"address_null_meeting" = "请先设置服务器地址再入会";
+"display_name_join_meeting" = "用户名";
+"old_password" = "旧密码";
+"new_password" = "新密码";
+"psd_confirm" = "确认";
+"join_meeting_entry" = "加入会议";
+"check_you_password" = "核对您的密码";
+"confirm_password" = "确认密码";
+"setting_reduction" = "智能降噪";
+"setting_server_modified" = "设置成功";
+"setting_server_modified_success" = "您的服务器地址已更换,请重新登录";
+"setting_cannot_char" = "不能超过30个字符";
+"people" = "人";
+"minute" = "分钟";
+"hour" = "小时";
+"today" = "今天";
+"started" = "已开始";
+"app_audio" = "音频";
+"app_video" = "视频";
+"app_content" = "共享";
+"app_delay" = "延迟";
+
+"psd_change_ok" = "密码已修改";
+"psd_loginchange_ok" = "您的密码已修改,请重新登录";
+"psd_change_error" = "修改密码出错,请检查密码";
+"psd_old_error" = "旧密码不能为空";
+"psd_new_error" = "新密码不能为空";
+"psd_confirm_empty" = "确认密码不能为空";
+"psd_two_error" = "两次密码不一致";
+
+"join_meeting_set_server" = "入会或登录须先设置服务器地址!";
+"nor_meeting" = "的会议";
+"ple_meeting_psd" = "请输入会议密码";
+"join_meeting_password" = "入会密码";
+"join_finish" = "结束";
+"join_more" = "更多";
+"join_partic" = "参与者";
+
+"join_Mute" = "静音";
+"join_UNmute" = "解除静音";
+"join_stop_video" = "停止视频";
+"join_open_video" = "开启视频";
+"join_close_frame" = "关闭本人浮框";
+"join_open_frame" = "开启本人浮框";
+"share_close_content" = "停止共享";
+"share_open_content" = "共享屏幕";
+
+
+"meeting_statistics" = "统计信息";
+"meeting_time" = "时间";
+"meeting_timecost" = "用时";
+"meeting_name" = "会议名称";
+"meeting_description" = "会议介绍";
+"meeting_delete" = "删除";
+"meeting_delete_m" = "删除会议";
+"meeting_alert_delete" = "确定从历史会议中删除该会议吗?";
+"meeting_dismiss" = "结束会议";
+"meeting_leave" = "离开会议";
+"meeting_muteall" = "  全体静音  ";
+"meeting_ask_unmute" = "  取消全体静音  ";
+"meeting_invite_join" = " 邀请入会 ";
+"meeting_unmute_all" = "取消全体静音";
+"meeting_renamed" = "改名";
+"meeting_you_unmuted" = "您已被解除静音";
+"meeting_you_needspeak" = "已对您开启静音，如需发言可自行解除静音";
+"meeting_Host_mute" = "主持人已开启静音.";
+"meeting_you_youselfmute" = "您已静音，请开启麦克风后发言";
+"meeting_host" = "主持人";
+"meeting_invite_link" = "邀请链接";
+"meeting_copy_info" = "复制邀请";
+"meeting_copy_success" = "会议信息已复制到剪切板";
+"meeting_not_meetingNumber" = "您没有个人会议号";
+"meeting_unmute" = "取消静音";
+"meeting_mute_participants" = "全体参会者静音";
+"meeting_numute_participants" = "取消全体参会者静音";
+"meeting_allParticipants_unmute" = "允许参会者自我解除静音";
+"meeting_stop_title" = "您要结束此会议吗?";
+"meeting_stop_message" = "结束会议,全体参会者将被解散!";
+"meeting_joinname_noempty" = "入会名称不可为空!";
+"meeting_host_endMeeting" = "主持人结束了这次会议";
+"meeting_host_remove" = "您被主持人移出了会议。";
+"meeting_psd_max" = "密码错误已达上限,请重新加入会议";
+"meeting_host_openMicrophone" = "主持人要求您打开麦克风";
+"meeting_keep_mute" = "继续静音";
+"meeting_duration" = "会议时长";
+"meeting_edit" = "编辑";
+"meeting_join" = "进入会议";
+"meeting_copy" = "复制会议";
+"meeting_cancel" = "取消会议";
+"meeting_schedule_success" = "成功预约会议";
+"meeting_update_success" = "更新成功";
+"meeting_schedule_meeting" = "预约会议";
+"meeting_start_time" = "开始时间";
+"meeting_end_time" = "结束时间";
+"meeting_sahre_url_join" = "或点击以下链接直接加入会议:";
+"meeting_time_zone" = "时区";
+"meeting_china_time" = "(GMT+08:00)中国标准时间 - 北京";
+"meeting_Invited_users" = "受邀用户";
+"meeting_join_mute" = "入会静音";
+"meeting_allow_guest_in" = "允许访客拨入";
+"meeting_shared_watermark" = "共享屏幕水印";
+"meeting_user_people_number" = "使用我的个人会议号";
+"meeting_begin_in" = "即将开始";
+"meeting_invite_user" = "受邀用户";
+"meeting_select_user" = "请选择用户";
+"meeting_add_user" = "已添加用户";
+"meeting_add_user_d" = "增加用户";
+"meeting_number_max" = "人数上线";
+"meeting_added" = "已添加";
+"meeting_noInvitees" = "暂无邀请人";
+"meeting_overload_people" = "邀请人数目前限制100人";
+"meeting_network_error" = "无法连接服务器，请检查您的网络和服务器设置。";
+"meeting_inviteJoinCopy" = " 复制会议信息邀请入会 ";
+"meeting_clickUrlJoin" = "点击以下链接直接加入会议:";
+
+//for in-callquanbu
+"participants" = "参会者";
+"participants_me" = "(我)";
+"call_number" = "会议号";
+"call_type" = "呼叫类型";
+"call_rate" = "呼叫速率";
+"hang_up" = "挂断";
+"call_cancel" = "取消";
+"hang_up_notice" = "你确定要离开会议吗？";
+"meeting_password" = "会议密码";
+"meeting_connecting" = "连接中...";
+
+"statistic_participant" = "参会者";
+"statistic_channel" = "媒体";
+"statistic_protocol" = "协议";
+"statistic_format" = "格式";
+"statistic_rate" = "速率";
+"statistic_rateused" = "实际速率";
+"statistic_frame_rate" = "帧率";
+"statistic_lost" = "丢包";
+"statistic_jitter" = "抖动";
+"statistic_concealment" = "丢包恢复";
+
+//for in-scan QR
+"qr_scan" = "扫一扫";
+"aim_scan" = "扫描二维码";
+//
+"ok" = "确定";
+"wrong_qr" = "无法识别的二维码";
+
+"CameraUsageDescription"="选择“设置”，允许 神旗CE 访问摄像头。";
+"MicrophoneUsageDescription"="选择“设置”，允许 神旗CE 访问麦克风。";
+"PhotoLibraryUsageDescription"="选择“设置”，允许 神旗CE 访问照片。";
+"Setting"="设置";
+"go_set" = "去设置";
+"Cancel"="取消";
+"sign_in_new_pwd_wrong"="新密码不符合密码复杂度规则";
+"close"="关闭";
+
+"unmute_now"="打开麦克风";
+"stay_muted"="保持静音";
+"mute_reminder"="会议主持人邀请你打开麦克风。";
+
+"app_copyright" = "版本: ";
+
+"network_error_1" = "发生未知错误";
+"network_error_999" = "请求已取消";
+"network_error_1002" = "不支持的url";
+"network_error_1011" = "服务器响应错误";
+"network_error_1017" = "无法解析响应";
+"network_error" = "网络请求失败";
+
+/////////////////////////////////////////////////////
+"language" = "语言";
+"language_setting" = "语言设置";
+"language_setting_restart" = "语言设置需重启后生效";
+"language_setting_auto" = "或下次启用神旗CE时，设置自动生效";
+"language_next" = "下次启用";
+"language_now" = "立即重启";
+
+"您正在共享屏幕" = "您正在共享屏幕";
+"共享设备音频：关" = "共享设备音频：关";
+"停止共享" = "停止共享";
+"share_invitation" = "邀请您参加会议";
+"share_content" = "请打开神旗CEAPP,输入会议号、密码入会";
+"share_content_nopwd" = "请打开神旗CEAPP,输入会议号入会";
+"share_plate" = "已复制到粘贴板!";
+"share_stop_screen" = "你已停止共享屏幕";
+
+"meeting_cancleNoJoin" = "取消会议后,其他成员将无法参会";
+"meeting_noAppointment" = "无预约会议";
+"meeting_thinhAgain" = "再想想";
+"meeting_psdTimeout" = "输入密码超时";
+"meeting_overdue" = "该会议已过期，无法入会";
+"meeting_timeLimit" = "会议开始前30分钟方可入会";
+"meeting_loginJoin" = "该会议室不允许访客入会，请登录后重试";
+"meeting_full" = "该会议室已满员，无法入会";
+"meeting_licenseOverdue" = "服务未获取软件许可或软件许可已过期";
+"meeting_upgradeLicense" = "用户数已达到上限，请升级软件许可";
+"meeting_networkRejoin" = "网络异常，请检查网络设置或尝试重新入会";
+"meeting_rejoin" = "重新入会";
+"meeting_orderError" = "预约会议失败";
+"meeting_updateError" = "更新预约会议失败";
+"meeting_networkErrorIng" = "网络异常，正在连接...";
+"meeting_info" = "会议信息";
+"meeting_nerworkstate" = "网络状态";
+"meeting_info_test" = " 统计信息（内测）";
+"meeting_shareed_nerworkstate" = "网络异常";
+
+"eula_alert" = "服务协议及提示";
+"eula_privacy" = "在使用软件前，请详细阅读该产品的软件服务及隐私政策。";
+"eula_read" = "  我已阅读并同意该 ";
+"eula_read_t" = "《服务协议》";
+"eula_agree" = "同意协议并继续";
+"eula_title" = "服务协议";
+
+"string_tips" = "提示";
+"account_locking" = "账户已锁";
+"account_unlocking" = "请联系管理员解锁";
+
+"device_noCamera" = "设备没有摄像头";
+
+"meeting_title_noEmpty" = "会议名称不可为空 ！";
+"meeting_theme" = "会议主题";
+"meeting_invited" = "受邀会";
+"app_pinzhong" = "SQ MeetingCE";
+"password_high" = "密码长度8到48位，必须包含大、小写字母，数字和特殊字符。";
+"password_low" = "密码长度6到48位，由大、小写字母，数字，特殊字符组成。";
+"unmute_now_new" = "打开麦克风";
+"meeting_yes" = "取消会议";
+
+////////////////////////////////////////////2.0///////////////////////////
+"meeting_record" = "录制"; //@"Record"
+"meeting_stop_record" = "结束录制"; //@"End"
+"meeting_live" = "直播"; //@"Live"
+"meeting_stop_live" = "结束直播"; //@"End"
+"meeting_start_overlay" = "启用横幅";//"Overlay";
+"meeting_stop_overlay" = "停止横幅"; //"Stop";
+"meeting_top_overlay" = "顶部"; //"Top";
+"meeting_center_overlay" = "中部"; //"Center";
+"meeting_bottom_overlay" = "底部"; //"Bottom";
+
+"meeting_heaer_start_overlay" = "启用横幅";//"Start Overlay Messag";
+"meeting_overlay_rolling" = "滚动"; //"Rolling";
+"meeting_overlay_message" = "横幅内容"; //Message
+"meeting_overlay_repetitions" = "播放次数"; //Repetitions
+"meeting_overlay_postion" = "横幅位置"; //Postion
+"meeting_overlay_noempty" = "内容不可为空"; //Content cannot be empty
+"meeting_overlay_start" = "横幅已启用"; //Overlay started
+"meeting_overlay_stop" = "横幅已停止"; //Overlay stopped
+"meeting_overlay_welcome" = "欢迎！"; //welcome! //歡迎
+
+
+"meeting_setLecture" = "设为演讲者"; //Set Lecturer
+"meeting_cancelLecture" = "取消演讲者"; //Cancel Lecturer
+"meeting_remove" = "移出会议室"; //Remove
+
+"meeting_name_beEmpty" = "名字不可为空";//Name cannot be empty
+"meeting_removeUser" = "您要把用户移出会议室吗?"; //Are you sure to remove this user from the meeting ?
+"meeting_settLecture" = "您已被主持人设为演讲者"; //You have been set as the lecture by the host //您已被主持人設為演講者
+
+"meeting_removeUser_success" = "该用户已被移出会议室"; //Remove user successfully
+"meeting_setLecture_success" = "该用户已被设为演讲者"; //Set lecture successfully
+"meeting_cancelLecture_success" = "该用户已被取消演讲者"; //Cancel lecture successfully
+"meeting_modify_success" = "修改成功"; //Success
+"meeting_change_name_success" = "您的名称已被修改为"; //Your name in this meeting has been changed to
+
+"meeting_living" = "  直播中"; //Living
+"meeting_start_live" = "主持人已开启会议直播"; //Live started by the host
+"meeting_end_live" = "主持人已结束会议直播"; //Live ended by the host
+
+"meeting_recording" = "  录制中"; //Recording
+"meeting_start_recording" = "主持人已开启会议录制"; //Recording started by the host
+"meeting_end_recording" = "主持人已结束会议录制";   //Recording ended by the host
+"meeting_start_end_time" = "开始时间不能早于当前时间";
+
+"change_default_service_address_title1"   = "当前入会所用的服务器地址";
+"change_default_service_address_title2"   = "与默认地址不一致，是否保存为默认地址？";
+"change_default_service_address_message"  = "如有疑问，请联系管理员";
+"change_default_service_address_save"     = "保存成功";
+
+FM_VIDEO_RECORDING_FAILED_TITLE              ="录制失败";
+FM_VIDEO_RECORDING_START_ERROR               ="开始录制错误";
+FM_VIDEO_RECORDING_PARAM_ERROR               ="录制参数错误";
+FM_VIDEO_RECORDING_LICENSE_ERROR             ="服务未获取软件许可或许可已过期";
+FM_VIDEO_RECORDING_LICENSE_FULL_ERROR        ="录制用户数已达到上限，请升级软件许可";
+FM_VIDEO_RECORDING_SOURCE_FULL_ERROR         ="录制服务器资源不足，请联系系统管理员";
+FM_VIDEO_RECORDING_NOT_EXIT_ERROR            ="录播服务器不存在";
+FM_VIDEO_RECORDING_NOT_REPEATE_ERROR         ="不能重复开始录制";
+
+FM_VIDEO_RECORDING_STOP_ERROR                ="结束录制错误";
+FM_VIDEO_RECORDING_STOP_PARAM_ERROR          ="结束录制参数错误";
+
+FM_VIDEO_STREAMING_FAILED_TITLE              ="直播失败";
+FM_VIDEO_STREAMING_START_ERROR               ="开始直播错误";
+FM_VIDEO_STREAMING_PARAM_ERROR               ="直播参数错误";
+FM_VIDEO_STREAMING_LICENSE_ERROR             ="服务未获取软件许可或许可已过期";
+FM_VIDEO_STREAMING_LICENSE_FULL_ERROR        ="直播用户数已达到上限，请升级软件许可";
+FM_VIDEO_STREAMING_SOURCE_FULL_ERROR         ="直播服务器资源不足，请联系系统管理员";
+FM_VIDEO_STREAMING_NOT_EXIT_ERROR            ="直播服务器不存在";
+FM_VIDEO_STREAMING_NOT_REPEATE_ERROR         ="不能重复开始直播";
+
+FM_VIDEO_STREAMING_STOP_ERROR                ="结束直播错误";
+FM_VIDEO_STREAMING_STOP_PARAM_ERROR          ="结束直播参数错误";
+
+FM_VIDEO_STREAMING_PASSWORD_BUTTON_TITLE     ="开启密码保护";
+FM_VIDEO_STREAMING_PASSWORD_DESCRIPTION      ="开启密码保护，让您的会议直播更安全";
+FM_VIDEO_STREAMING_PASSWORD_LIVE             ="直播密码：";
+
+FM_VIDEO_MY_RECORDING = "我的录制";
+
+FM_VIDEO_START_RECORDING = "开始云录制？";
+FM_VIDEO_START_RECORDING_MESSAGE = "开启后，将录制会议中音频、视频画面及共享屏幕内容，并告知所有参会成员。";
+FM_VIDEO_START_RECORDING_BUTTON_TITLE = "开始录制";
+
+FM_VIDEO_START_STREAMING = "开始直播？";
+FM_VIDEO_START_STREAMING_MESSAGE = "开始后，将直播会议中音频、视频画面、共享屏幕内容，并告知所有参会成员。";
+FM_VIDEO_START_STREAMING_BUTTON_TITLE = "开始直播";
+
+FM_VIDEO_RECORDING_START_REMINDER = "录制已开启";
+FM_VIDEO_RECORDING_STOP_REMINDER = "录制已结束";
+
+FM_VIDEO_STREAMING_START_REMINDER = "直播已开始";
+FM_VIDEO_STREAMING_STOP_REMINDER = "直播已结束";
+
+FM_VIDEO_RECORDING_SUCCESS_TITLE = "会议录制中";
+FM_VIDEO_RECORDING_SUCCESS_DESCRIPTION = "录制结束后，可通过“神旗CE系统Web管理系统”-“会议录制”查看录制文件";
+FM_VIDEO_RECORDING_SUCCESS_BUTTON = "知道了";
+
+FM_VIDEO_STREAMING_SHARE_URL_TITLE = "分享会议直播";
+FM_VIDEO_STREAMING_SHARE_URL = "请点击以下链接观看：";
+FM_VIDEO_STREAMING_SHARE_URL_BUTTON = "复制直播信息";
+FM_VIDEO_STREAMING_SHARE_URL_REMINDER = "直播信息已复制到粘贴板";
+FM_VIDEO_STREAMING_SHARE_URL_INVITE = "%@ 邀请您观看 \"%@\" 的会议直播";
+
+"MEETING_ASK_FOR_UNMUTE_OK_TITLE"   = "已发送申请";
+"MEETING_ASK_FOR_UNMUTE_OK_MESSAGE" = "您的解除静音申请已发送，请等待主持人操作";
+
+"MEETING_ASK_FOR_UNMUTE_ALERT_TITLE"   = "您已静音";
+"MEETING_ASK_FOR_UNMUTE_ALERT_MESSAGE" = "主持人不允许解除静音，您可以向主持人申请解除静音";
+"MEETING_ASK_FOR_UNMUTE_ALERT_OK"      = "申请解除静音";
+
+"MEETING_REQUESTUNMUTE_OK_TITLE"   = "主持人同意申请";
+"MEETING_REQUESTUNMUTE_OK_MESSAGE" = "主持人已同意您的解除静音申请";
+"MEETING_REQUESTUNMUTE_OK_CANCLE"  = "保持静音";
+"MEETING_REQUESTUNMUTE_OK_OK"      = "解除静音";
+
+"MEETING_ASK_TO_UNMUTE_TITLE" = "正在申请解除静音";
+
+"MEETING_ROSTER_CELLVIEW_DES"     = "申请解除静音";
+"MEETING_ROSTER_CELLVIEW_OK"      = "同意";
+"MEETING_ROSTER_CELLVIEW_ALL_OK"  = "全部同意";
+"MEETING_ROSTER_CELLVIEW_MESSAGE" = "已同意申请";
+"MEETING_ROSTER_CELLVIEW_REQUESTSEND" = "已发送解除静音申请";
+"MEETING_ROSTER_UNMUTEREUQEST_LISTVIEW_TITLE" = "参会者权限申请";
+"MEETING_ROSTER_LISTVIEW_DEFAULT_CONTENT" = "无参会者申请";
+"MEETING_ROSTER_UNMUTEREUQEST_LISTVIEW_View" = "查看";
+
+"MEETING_ROSTER_LISTVIEW_PIN"   = "固定画面";
+"MEETING_ROSTER_LISTVIEW_UNPIN" = "取消固定";
+"MEETING_ROSTER_LISTVIEW_PIN_SUCCESS"   = "已固定画面";
+"MEETING_ROSTER_LISTVIEW_UNPIN_SUCCESS" = "已取消固定画面";
+"MEETING_ROSTER_LISTVIEW_PIN_ME"        = "您的画面视窗已被固定";
+"MEETING_ROSTER_LISTVIEW_UNPIN_ME"      = "您的画面视窗已被取消固定";
+"MEETING_ROSTER_LISTVIEW_LECTURER"      = "演讲者";
+
+
+"MEETING_STOP_LIVE_TITLE"        = "观众正在观看直播，确定要结束直播？";
+"MEETING_STOP_RECORD_TITLE"      = "结束云录制？";
+"MEETING_STOP_RECORD_MESSAGE"    = "录制结束后，可通过“神旗CE系统Web管理系统”-“我的录制”查看录制文件";
+"MEETING_STOP_LIVE_BUTTON"       = "结束";
+"MEETING_STOP_LIVE_SHARE"        = "分享";
+
+
+"MEETING_START_ALLMUTE"  = "已开启全体静音";
+"MEETING_CANCEL_ALLMUTE" = "已取消全体静音";
+
+"RECORDING_SERVICE_ERROR" = "录播服务器错误";
+"SHENQI_WEBPORTAL_TOVIEW" = "使用电脑浏览器，访问下面的神旗web管理界面查看:";
+
+"MEETING_REMINDER_IGNORE"             = "忽略";
+"MEETING_REMINDER_MEETINGALERTNUMBER" = "个会议提醒";
+"MEETING_REMINDER_MEETINGOWNER"       = "发起人";
+"MEETING_REMINDER_CALENDAR"           = "添加到系统日历";
+"MEETING_REMINDER_CALENDAR_ADDOK"     = "添加成功";
+"MEETING_REMINDER_REPEAT_MEETING"     = "您已在会议中，如需参会，请退出当前会议后，重新入会";
+"MEETING_REMINDER_ACCEPTMEETING"      = "接收会议提醒";
+"MEETING_REMINDER_ALERTTITLE"         = "开启会议提醒";
+"MEETING_REMINDER_ALERTCONTENT"       = "在系统设置中，打开\"允许通知\"即可接收会议提醒";
+"MEETING_REMINDER_ALERTGO"            = "前往设置";
+
+
+"MEETING_LOG_TITLE"               =  "问题诊断";
+"MEETING_LOG_CONTENT"             =  "在使用过程中，如出现任何功能异常，请上传日志来帮助我们更好的定位和解决问题，深表感谢！";
+"MEETING_LOG_TEXTVIEW_DEFIAULT"   =  "   请描述您遇到的问题（必填，100字以内）";
+"MEETING_LOG_UPLOADBUTTON"        =  "上传日志";
+"MEETING_LOG_PLEASE_ISSUE"        =  "请描述下您遇到的问题";
+"MEETING_LOG_UPLOADING"      = "正在上传日志";
+"MEETING_LOG_UPLOAD_DONE"    = "上传日志成功";
+"MEETING_LOG_UPLOAD_ERROR"   = "上传日志失败，请重试";
+"MEETING_LOG_CANCEL_UPLOAD"  = "取消上传";
+"MEETING_LOG_UPLOAD_GOBACK"  = "返回";
+"MEETING_LOG_UPLOAD_AGAIN"   = "重新上传";
+"MEETING_LOG_UPLOAD_SPEED"   = "速度";
+"MEETING_LOG_CANCEL_UPLOADDONE" = "已取消上传";
+
+
+"MEETING_REMOTEPEOPLEVIDEO_STOP"            = "停止接收视频";
+"MEETING_REMOTEPEOPLEVIDEO_RECEIVING"       = "接收视频";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_STOP"      = "您已停止接收视频";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_RECEIVING" = "您已开始接收视频";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_MESSAGE"   = "当前您的网络状况不佳，为保证会议质量，建议您暂停视频";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_CANCLE"    = "忽略";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_OK"        = "关闭视频";
+
+"CONTENT_UPRATE_ERROR_MESSAGE"  =  "当前网络状态不佳，系统限制了分享内容的能力";
+
+/**
+ 3.3
+ */
+
+"recurrence_frequency"  = "重复频率"; //Frequency
+"recurrence_end_series"  = "重复频率设置"; //End Series
+"recurrence_no"  = "不重复"; //NO
+"recurrence_daily"  = "每天"; //Daily
+"recurrence_weekly"  = "每周"; //Weekly
+"recurrence_monthly"  = "每月"; //Monthly
+"recurrence_everyDays"  = "每%@天"; //Every %@ days
+"recurrence_everyWeeks"  = "每%@周"; //Every %@ weeks
+"recurrence_everyMonths"  = "每%@月"; //Every %@ months
+"recurrence_endSeries"  = "结束重复"; //End Series
+"recurrence_recurEvery"  = "频率"; //Eecur every
+"recurrence_every"  = "每"; //Every %@ days
+"recurrence_days"  = "天"; //day(s)
+"recurrence_weeks"  = "周"; //week(s)
+"recurrence_months"  = "月"; //month(s)
+"recurrence_dueDate"  = "结束日期"; //Due Date
+"recurrence_unableCancel"  = "无法取消已选择的会议开始日期"; //Unable to cancel the selected meeting start date
+"recurrence_sun"  = "日"; //Sun
+"recurrence_mon"  = "一"; //Mon
+"recurrence_tue"  = "二"; //Tue
+"recurrence_wed"  = "三"; //Wed
+"recurrence_thu"  = "四"; //Thu
+"recurrence_fri"  = "五"; //Fri
+"recurrence_sat"  = "六"; //Sat
+"recurrence_selectWeek"  = "请选择周几重复"; //Select the repeat day(s) of the week
+"recurrence_selectMoth"  = "请选择重复日期"; //Select the repeat date(s)
+"recurrence_meetingWillOn"  = "会议将于"; //The meeting will repeat on
+"recurrence_meetingWillWeeks"  = "会议将于"; //The meeting will repeat on
+"recurrence_scheduledOK"  = " 会议预约成功"; //Scheduled successfully
+"recurrence_recurrence"  = "重复周期"; //Recurrence
+"recurrence_recurring"  = " 周期 "; //Recurring
+"recurrence_remainingmeetings"  = "剩余%@场"; // %@ remaining meetings
+"recurrence_editCurrent"  = "修改本次会议"; //Edit Current Meeting
+"recurrence_editRecurring"  = "修改该系列周期性会议"; //Edit Recurring Meeting
+"recurrence_cancelMeeting"  = "取消周期性会议?"; // Cancel Recurring Meeting？
+"recurrence_cancleEntireWell"  = "  同时取消该系列周期会议"; // Cancel the entire series as well
+"recurrence_allNoJoin"  = "取消会议后,其他成员将无法入会"; // All participants can not join this meeting once canceled
+"recurrence_editRecurring2"  = "修改周期性会议"; //Edit Recurring Meeting
+"recurrence_cacaleRecurringMeeting"  = "取消周期性会议"; //Cancel Recurring Meeting
+"recurrence_done"  = "保存修改";
+"recurrence_change"  = "修改";
+"recurrence_meeting"  = "周期会议";
+"recurrence_meetingStr"  = "会议";
+"recurrence_Scheduled"  = "预约";
+
+"recurrence_meetingRecurrenceDayly"  = "会议将于每天重复"; //The meeting will be repeated daily
+"recurrence_meetingRecurrenceMonthly" = "%@日";
+"recurrence_meetingMonthlyCycle" = "重复";
+"recurrence_meetingWeekly" = "周%@";
+
+"recurrence_meetingStopTime" = "于%@结束";
+"recurrence_meetingEndStopTime" = "于%@结束";
+"recurrence_meetingTotalNumber" = "共%td场会议";
+
+"meeting_url_sameaddress" = "不支持加入外部系统的会议";
+"meeting_url_nologin" = "请先登录后，再添加会议";
+
+
+"meeting_add_removeRecurrence_title" = "移除周期性会议?";  //Remove the recurring meeting？
+"meeting_add_removeRecurrence_content" = "将该系列周期会议从会议列表中移除"; //You will remove this recurring meeting from the meeting list
+"meeting_add_removeRecurrence" = "移除会议"; //Remove
+"meeting_add_RecurrenceSuccess" = "已成功添加到会议列表"; //Added to the meeting list successfully
+"meeting_add_RecurrenceError" = "添加会议失败"; //Adding to meeting list failed
+
+"meeting_add_removeMeeting_title" = "移除会议?"; //Remove the meeting ？
+"meeting_add_removeMeeting_content" = "将该会议从会议列表中移除"; //You will remove this meeting from the meeting list
+"meeting_remove_Onemeeting" = "删除成功";
+"meeting_calendar_notEnabled" = "权限未开启";//Privileges are not enabled
+"meeting_opCaledar_setting" = "请在设置中开启日历权限";
+
+"meeting_start_time_message" = "开始时间不可早于周期中前一次会议的结束时间";
+"meeting_end_time_message" = "结束时间不可晚于周期中后一次会议的开始时间";
+"meeting_joining_time" = "任意时间";
+"meeting_early_joining_time" = "提前入会时间";
+"meeting_show_floating" = "浮窗显示";
+"meeting_share_inMeeting" = " 会议中";
+"meeting_share_shareing" = " 共享中";
+"app_website_url" = "神旗官网:";
+"app_Github_url" = "开源地址:";

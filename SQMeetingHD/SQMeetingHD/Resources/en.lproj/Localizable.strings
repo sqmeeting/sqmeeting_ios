@@ -1,0 +1,585 @@
+"app_displayname" = "SQ MeetingCE";
+"app_title" = "SQ MeetingCE";
+"video_call" = "Video Conference";
+"audio_call" = "Audio Conference";
+"open_video" = "Turn on Camera";
+"use_per_meetingn" ="Use Personal Meeting ID";
+"please_you_meetingN" = "Please choose your Meeting ID";
+"home_or" = "or";
+"sign_in" = "Sign In";
+"meeting_id" = "Meeting ID";
+"meeting_number_join" = "Join with Meeting ID";
+"new_meeting" = "Instant";
+"schedule_meeting" = "Schedule";
+"start_meeting" = "Start Meeting";
+"history_meeting" = "History";
+"history_meeting_null" = "No history";
+"display_name" = "Display Name";
+"clear_history" = "Clear";
+"clear_history_detail" = "Are you sure to clear all meeting histories?";
+"logout_notifica" = "Sign Out Notification";
+"login_again_notifica" = "Verification failed. Please sign in and join meeting again";
+"meeting_psd" = "Meeting Password";
+"meeting_details" = "Meeting Detail";
+"call_join" = "Join";
+"remember_name" = "Remember Name";
+"phone_microphone" = "Turn on Microphone";
+"phone_camera" = "Turn on Camera";
+"audio_only" = "Voice Meeting";
+"audio_only_message" = "Video and screen sharing don't work in voice mode";
+"please_password" = "Please input password";
+"please_name" = "Input your name";
+"meeting_id_error" = "Meeting ID can't be empty";
+"meeting_name_error" = "Please input your display name";
+"call_ended" = "Call Ended";
+"server_unreachable" = "Failed to join meeting, please check your server setting";
+"meeting_locked" = "Meeting locked";
+"meeting_not_exist" = "The meeting requires sign in or doesn't exist. Retry after sign in";
+"app_settings" = "Settings";
+"server_address" = "Server Address";
+"server_setting" = "Server Setting";
+"server_saved" = "Saved successfully";
+"phone_logs" = "Logs";
+"app_version" = "Version Info";
+"version" = "Version";
+"version_unknown" = "Unknow";
+"phone_testing" = "Testing Only!";
+"phone_testing_title" = "Testing Settings";
+"phone_rate_notice" = "Edit this item will change the meeting call rate";
+"dialog_cancel" = "Cancel";
+"dialog_save" = "Save";
+"rate_limit" = "The number should be 0, or, between 64 and 2048";
+"user_name" = "Display Name";
+"username_account" = "Username/Account";
+"Account" = "Account";
+"update_password" = "Update Password";
+"login_success" = "Login Successful";
+"user_name_empty" = "Username should not be empty";
+"user_psd_error" = "Invalid username or password. Please try again";
+"user_login_error00" = "Login failed, please try again";
+"user_login_error01" = "User has been locked, please retry after 5 minutes";
+"user_login_error02" = "User has been locked, please contact administrator";
+"string_next" = "Next";
+"set_ip" = "Please configure server address";
+"set_ip_error" = "Server address can't be blank";
+"user_not_exist" = "User not exist";
+"admin_hint" = "This is administrator account, Please update the password in web portal to active the account.";
+"string_ok" = "OK";
+"string_warning" = "Warning";
+"pwd_empty" = "Password can't be blank";
+"pwd_invalid" = "Wrong password, please try again.";
+"string_pwd" = "Password";
+"remember_pwd" = "Remember Password";
+"forget_pwd" = "Forget password?";
+"user_account" = "Personal Info";
+"sign_out_failed" = "Sign Out Failed";
+"sign_out" = "Sign Out";
+"user_email" = "Email";
+"user_first_name" = "First Name";
+"user_last_name" = "Last Name";
+"pwd_limit_notice" = "The minimum length of password is 6";
+"current_pwd" = "Current Password";
+"new_pwd" = "Set new password";
+"invalid_error" = "Invalid, please try again.";
+"set_pwd" = "Update Password";
+"string_save" = "Save";
+"join_meeting" = "Join";
+"join_meeting_entry" = "Join Meeting";
+"account_password_login" = "User Sign In";
+"string_done" = "Done";
+"about_us" = "About Us";
+"modify_name" = "Modify Name";
+"address_null_login" = "Please configure server address before login";
+"address_null" = "Please configure server address";
+"address_null_meeting" = "Please configure server address before joining meeting";
+"display_name_join_meeting" = "Display Username";
+"old_password" = "Old";
+"new_password" = "New";
+"psd_confirm" = "Confirm";
+"check_you_password" = "password";
+"confirm_password" = "Confirm new password";
+"setting_reduction" = "Intelligent Noise Reduction";
+"setting_server_modified" = "Server address changed";
+"setting_server_modified_success" = "Please sign in again.";
+"setting_cannot_char" = "Cannot exceed 30 characters";
+"people" = "People";
+"minute" = "Minute";
+"hour" = "Hour";
+"today" = "Today";
+"started" = "In Progress";
+"app_audio" = "Audio";
+"app_video" = "Video";
+"app_content" = "Content";
+"app_delay" = "Delay";
+
+"psd_change_ok" = "Password Update";
+"psd_loginchange_ok" = "Your password has been updated, please sign in again";
+"psd_change_error" = "Update password failed";
+"psd_old_error" = "Old password can't be blank";
+"psd_new_error" = "New password can't be blank";
+"psd_confirm_empty" = "Confirm password can't be blank";
+"psd_two_error" = "Confirm password is inconsistent with new password";
+
+"join_meeting_set_server" = "Please configure server address before login or join meeting!";
+"nor_meeting" = "'s Meeting";
+"ple_meeting_psd" = "Please input meeting password";
+"join_meeting_password" = "Meeting Password";
+"join_finish" = "End";
+"join_more" = "More";
+"join_partic" = "Participants";
+
+"join_Mute" = "Mute";
+"join_UNmute" = "Unmute";
+"join_stop_video" = "Stop Video";
+"join_open_video" = "Start Video";
+"join_close_frame" = "Close Local View";
+"join_open_frame" = "Start Local View";
+"share_close_content" = "Stop Share";
+"share_open_content" = "Start Share";
+
+
+"meeting_statistics" = "Meeting Statistics";
+"meeting_time" = "Time";
+"meeting_timecost" = "Duration";
+"meeting_name" = "Meeting Topic";
+"meeting_description" = "Meeting Description";
+"meeting_delete" = "Delete";
+"meeting_delete_m" = "Delete Meeting";
+"meeting_alert_delete" = "Are you sure to clear meeting history?";
+"meeting_dismiss" = "End Meeting";
+"meeting_leave" = "Leave Meeting";
+"meeting_muteall" = "  Mute All  ";
+"meeting_ask_unmute" = "  Unmute All  ";
+"meeting_invite_join" = " Invite join ";
+"meeting_unmute_all" = "Unmute All";
+"meeting_renamed" = "Rename";
+"meeting_you_unmuted" = "You are unmuted";
+"meeting_you_needspeak" = "You are muted and you can unmute yourself if speaking";
+"meeting_Host_mute" = "This meeting has been muted by host";
+"meeting_you_youselfmute" = "You are muted, please unmute before speaking";
+"meeting_host" = "Host";
+"meeting_invite_link" = "Meeting Link";
+"meeting_copy_info" = "Copy Invitation";
+"meeting_copy_success" = "Meeting invitation has been copied to the clipboard";
+"meeting_not_meetingNumber" = "No Personal Meeting ID";
+"meeting_unmute" = "Unmute";
+"meeting_mute_participants" = "Mute All";
+"meeting_numute_participants" = "Unmute All";
+"meeting_allParticipants_unmute" = "Allow Self Unmute";
+"meeting_stop_title" = "Are sure to end the meeting?";
+"meeting_stop_message" = "End meeting will dismiss all participants!";
+"meeting_joinname_noempty" = "Meeting title can't be blank!";
+"meeting_host_endMeeting" = "The meeting has been ended by the host";
+"meeting_host_remove" = "You have been removed from the meeting by the host";
+"meeting_psd_max" = "The maximum number of incorrect passwords has been reached, please rejoin the meeting";
+"meeting_host_openMicrophone" = "The host would like you to unmute your microphone";
+"meeting_keep_mute" = "Keep Muted";
+"meeting_duration" = "Duration";
+"meeting_edit" = "Edit";
+"meeting_join" = "Join";
+"meeting_copy" = "Copy Invitaion";
+"meeting_cancel" = "Cancel Meeting";
+"meeting_schedule_success" = "Schedule success";
+"meeting_update_success" = "Update success";
+"meeting_schedule_meeting" = "Scheduled";
+"meeting_start_time" = "Start Time";
+"meeting_end_time" = "End time";
+"meeting_sahre_url_join" = "Or click the following URL to join:";
+"meeting_time_zone" = "Time Zone";
+"meeting_china_time" = "(GMT+08:00)China Standard Time - BeiJing";
+"meeting_Invited_users" = "Invited Users";
+"meeting_join_mute" = "Mute When Join";
+"meeting_allow_guest_in" = "Allow Guest";
+"meeting_shared_watermark" = "Screen Sharing Watermark";
+"meeting_user_people_number" = "Use Personal Meeting ID";
+"meeting_begin_in" = "Upcoming";
+"meeting_invite_user" = "Invite Users";
+"meeting_select_user" = "Please choose users";
+"meeting_add_user" = "Added Users";
+"meeting_add_user_d" = "Add Users";
+"meeting_number_max" = "Maximum number of participants";
+"meeting_added" = "Added";
+"meeting_noInvitees" = "No invitee";
+"meeting_overload_people" = "Maximum number of participants is 100";
+"meeting_network_error" = "Failed to connect server, please check your network and server settings.";
+"meeting_inviteJoinCopy" = " Copy Invitation ";
+"meeting_clickUrlJoin" = "Click the link below to join the meeting directly:";
+
+//for in-callquanbu
+"participants" = "Participants";
+"participants_me" = "(Me)";
+"call_number" = "Meeting ID";
+"call_type" = "Call Type";
+"call_rate" = "Call Rate";
+"hang_up" = "Hang Up";
+"call_cancel" = "Cancel";
+"hang_up_notice" = "Are you sure you want to leave the meeting";
+"meeting_password" = "Meeting Password";
+"meeting_connecting" = "Connecting...";
+
+"statistic_participant" = "Participant";
+"statistic_channel" = "Media";
+"statistic_protocol" = "Protocol";
+"statistic_format" = "Format";
+"statistic_rate" = "Call Rate";
+"statistic_rateused" = "Rate Used";
+"statistic_frame_rate" = "Frame Rate";
+"statistic_lost" = "Packet Lost";
+"statistic_jitter" = "Jitter";
+"statistic_concealment" = "Concealment";
+
+//for in-scan QR
+"qr_scan" = "Scan";
+"aim_scan" = "Scan QR code";
+//
+"ok" = "OK";
+"wrong_qr" = "Unrecognized QR code";
+
+"CameraUsageDescription" = "Choose 'Settings'，Allow SQ MeetingCE access Camera.";
+"MicrophoneUsageDescription" = "Choose 'Settings'，Allow SQ MeetingCE access Microphone.";
+"PhotoLibraryUsageDescription" = "Choose 'Settings'，Allow SQ MeetingCE access Photo";
+"Setting" = "Settings";
+"go_set" = "Go to Settings";
+"Cancel" = "Cancel";
+"sign_in_new_pwd_wrong" = "New password does not meed the password policy requirements";
+"close" = "Close";
+
+"unmute_now" = "Unmute";
+"stay_muted" = "Kepp muted";
+"mute_reminder" = "Chairperson asks you unmute yourself.";
+
+"app_copyright" = "Version: ";
+
+"network_error_1" = "Unknown Error";
+"network_error_999" = "Requet canceled";
+"network_error_1002" = "Unsupported URL";
+"network_error_1011" = "Server reponse error";
+"network_error_1017" = "Unable to parse response";
+"network_error" = "Network connection failed";
+
+
+/////////////////////////////////////////////////////
+"language" = "Language";
+"language_setting" = "Language Settings";
+"language_setting_restart" = "Change language";
+"language_setting_auto" = "Language settings will take effect after APP restarted.";
+"language_next" = "Enable next time";
+"language_now" = "Restart Now";
+
+"您正在共享屏幕" = "Your screen is in the sharing";
+"共享设备音频：关" = "Sharing audio device: Off";
+"停止共享" = "Stop";
+"share_invitation" = "invites you to a SQ MeetingCE meeting.";
+"share_content" = "Open the SQ MeetingCE client and enter the Meeting ID and Password to join the meeting.";
+"share_content_nopwd" = "Open the SQ MeetingCE client and enter the Meeting ID to join the meeting";
+"share_plate" = "Copied to the clipboard!";
+"share_stop_screen" = "Sharing stopped";
+
+"meeting_cancleNoJoin" = "All participants can not join this meeting once canceled";
+"meeting_noAppointment" = "No scheduled meeting";
+"meeting_thinhAgain" = "No";
+"meeting_psdTimeout" = "Input password timeout";
+"meeting_overdue" = "Join meeting failed meeting expired";
+"meeting_timeLimit" = "You can join the meeting 30 minutes before the meeting starts";
+"meeting_loginJoin" = "Guest users can't join this meeting, please sign in and try again";
+"meeting_full" = "The meeting is full and cannot be joined";
+"meeting_licenseOverdue" = "No software license or license has expired";
+"meeting_upgradeLicense" = "The number of users has reached the maximum, please upgrade your software license";
+"meeting_networkRejoin" = "Network exception. Please check your network or try re-join";
+"meeting_rejoin" = "Join again";
+"meeting_orderError" = "Schedule meeting failed";
+"meeting_updateError" = "Meeting update failed";
+"meeting_networkErrorIng" = "Network exception, reconnecting... ";
+"meeting_info" = "Meeting Info";
+"meeting_nerworkstate" = "Network Status";
+"meeting_info_test" = " Statistics (Internal Test)";
+"meeting_shareed_nerworkstate" = "Network exception";
+
+"eula_alert" = "SERVICES AGREEMENT AND DESCRIPTION";
+"eula_privacy" = "Before using the software, please read the software service and privacy policy of the product in detail.";
+"eula_read" = "  I have read and agreed to the";
+"eula_read_t" = " SERVICES AGREEMENT ";
+"eula_agree" = "Agree and Continue";
+"eula_title" = "SERVICES AGREEMENT";
+
+"string_tips" = "Tips";
+"account_locking" = "User locked";
+"account_unlocking" = "please contact administrator";
+
+"device_noCamera" = "No camera found for this device";
+"meeting_title_noEmpty" = "Meeting topic cannot be empty ！";
+"meeting_theme" = "Meeting Topic";
+"meeting_invited" = "Invited";
+"app_pinzhong" = "SQ MeetingCE";
+"password_high" = "Password length must be between 8 and 48 characters, must contain upper and lower case letters, numbers, and special characters";
+"password_low" = " Password length must be between 6 and 48 characters, can be upper and lower case letters, numbers, or special characters";
+"unmute_now_new" = "Unmute Now";
+"meeting_yes" = "Yes";
+
+////////////////////////////////////////////2.0///////////////////////////
+"meeting_record" = "Record";
+"meeting_stop_record" = "End";
+"meeting_live" = "Live";
+"meeting_stop_live" = "End";
+"meeting_start_overlay" = "Overlay";
+"meeting_stop_overlay" = "Stop";
+"meeting_top_overlay" = "Top";
+"meeting_center_overlay" = "Center";
+"meeting_bottom_overlay" = "Bottom";
+
+"meeting_heaer_start_overlay" = "Start Overlay Message";
+"meeting_overlay_rolling" = "Rolling";
+"meeting_overlay_message" = "Message";
+"meeting_overlay_repetitions" = "Repetitions";
+"meeting_overlay_postion" = "Position";
+"meeting_overlay_noempty" = "Content cannot be empty";
+"meeting_overlay_start" = "Overlay started";
+"meeting_overlay_stop" = "Overlay stopped";
+"meeting_overlay_welcome" = "welcome!";
+
+"meeting_setLecture" = "Set Lecturer";
+"meeting_cancelLecture" = "Cancel Lecturer";
+"meeting_remove" = "Remove";
+
+"meeting_name_beEmpty" = "Name cannot be empty";
+"meeting_removeUser" = "Are you sure to remove this user from the meeting ?";
+"meeting_settLecture" = "You have been set as the lecturer by the host";
+
+"meeting_removeUser_success" = "Remove user successfully";
+"meeting_setLecture_success" = "Set lecturer successfully";
+"meeting_cancelLecture_success" = "Cancel lecturer successfully";
+"meeting_modify_success" = "Success";
+"meeting_change_name_success" = "Your name in this meeting has been changed to";
+
+"meeting_living" = "  Living";
+"meeting_start_live" = "Live started by the host";
+"meeting_end_live" = "Live ended by the host";
+
+"meeting_recording" = "  Recording";
+"meeting_start_recording" = "Recording started by the host";
+"meeting_end_recording" = "Recording ended by the host";
+"meeting_start_end_time" = "Start time cannot be earlier than current time";
+
+"change_default_service_address_title1"   = "The server address ";
+"change_default_service_address_title2"   = "of this meeting is different from  the default address. Save it as the default address?";
+"change_default_service_address_message"  = "If you have any questions, please contact the administrator.";
+"change_default_service_address_save"     = "Saved successfully";
+
+FM_VIDEO_RECORDING_FAILED_TITLE              ="Recording failed";
+FM_VIDEO_RECORDING_START_ERROR               ="Start recording error";
+FM_VIDEO_RECORDING_PARAM_ERROR               ="Recording parameter error";
+FM_VIDEO_RECORDING_LICENSE_ERROR             ="The service is not licensed or the license has expired.";
+FM_VIDEO_RECORDING_LICENSE_FULL_ERROR        ="The recording users has reached the maximum, please upgrade the software license.";
+FM_VIDEO_RECORDING_SOURCE_FULL_ERROR         ="The recording server resource is insufficient, please contact the system administrator.";
+FM_VIDEO_RECORDING_NOT_EXIT_ERROR            ="The recording server does not exist";
+FM_VIDEO_RECORDING_NOT_REPEATE_ERROR         ="Cannot start recording repeatedly";
+
+FM_VIDEO_RECORDING_STOP_ERROR                ="End recording error";
+FM_VIDEO_RECORDING_STOP_PARAM_ERROR          ="End recording parameter error";
+
+FM_VIDEO_STREAMING_FAILED_TITLE              ="Live streaming failed";
+FM_VIDEO_STREAMING_START_ERROR               ="Start live streaming error";
+FM_VIDEO_STREAMING_PARAM_ERROR               ="Live streaming parameter error";
+FM_VIDEO_STREAMING_LICENSE_ERROR             ="The service is not licensed or the license has expired.";
+FM_VIDEO_STREAMING_LICENSE_FULL_ERROR        ="The live streaming  users has reached the maximum, please upgrade the software license.";
+FM_VIDEO_STREAMING_SOURCE_FULL_ERROR         ="The live streaming server resource is insufficient, please contact the system administrator.";
+FM_VIDEO_STREAMING_NOT_EXIT_ERROR            ="The live streaming server does not exist";
+FM_VIDEO_STREAMING_NOT_REPEATE_ERROR         ="Cannot start live streaming repeatedly";
+
+FM_VIDEO_STREAMING_STOP_ERROR                ="End live streaming error";
+FM_VIDEO_STREAMING_STOP_PARAM_ERROR          ="End live streaming parameter error";
+
+FM_VIDEO_STREAMING_PASSWORD_BUTTON_TITLE     ="Password protection";
+FM_VIDEO_STREAMING_PASSWORD_DESCRIPTION      ="It will make your live streaming safer";
+FM_VIDEO_STREAMING_PASSWORD_LIVE             ="Password:";
+
+FM_VIDEO_MY_RECORDING = "My Recordings";
+
+FM_VIDEO_START_RECORDING = "Start Cloud Recording？";
+FM_VIDEO_START_RECORDING_MESSAGE = "It will record meeting audio, video and shared screen, and inform all members.";
+FM_VIDEO_START_RECORDING_BUTTON_TITLE = "Start";
+
+FM_VIDEO_START_STREAMING= "Start live Stream？";
+FM_VIDEO_START_STREAMING_MESSAGE = "It will live meeting audio, video and shared screen, and inform all members.";
+FM_VIDEO_START_STREAMING_BUTTON_TITLE = "Start Live";
+
+FM_VIDEO_RECORDING_START_REMINDER = "Recording has started";
+FM_VIDEO_RECORDING_STOP_REMINDER = "Recording ended";
+
+FM_VIDEO_STREAMING_START_REMINDER = "Live streaming has started";
+FM_VIDEO_STREAMING_STOP_REMINDER = "Live ended";
+
+FM_VIDEO_RECORDING_SUCCESS_TITLE = "Recording";
+FM_VIDEO_RECORDING_SUCCESS_DESCRIPTION = "After recording ended, go to “SQ MeetingCE Webportal-Meeting Recording” to check recorded files.";
+FM_VIDEO_RECORDING_SUCCESS_BUTTON = "Got It";
+
+FM_VIDEO_STREAMING_SHARE_URL_TITLE = "Share Live Streaming";
+FM_VIDEO_STREAMING_SHARE_URL = "Click the link to watch:";
+FM_VIDEO_STREAMING_SHARE_URL_BUTTON = "Copy live info";
+FM_VIDEO_STREAMING_SHARE_URL_REMINDER = "Live info copied to the clipboard";
+FM_VIDEO_STREAMING_SHARE_URL_INVITE = "%@ invites you to a \"%@\" live streaming.";
+
+"MEETING_ASK_FOR_UNMUTE_OK_TITLE"   = "Requesting to be unmuted";
+"MEETING_ASK_FOR_UNMUTE_OK_MESSAGE" = "You are asking the host to unmute, please wait.";
+
+"MEETING_ASK_FOR_UNMUTE_ALERT_TITLE"   = "You are muted";
+"MEETING_ASK_FOR_UNMUTE_ALERT_MESSAGE" = "The host does not allow unmuting. you can request to do so.";
+"MEETING_ASK_FOR_UNMUTE_ALERT_OK"      = "Ask to unmute";
+
+"MEETING_REQUESTUNMUTE_OK_TITLE"   = "Request approved";
+"MEETING_REQUESTUNMUTE_OK_MESSAGE" = "The host has approved your request to be unmuted.";
+"MEETING_REQUESTUNMUTE_OK_CANCLE"  = "Keep Mute";
+"MEETING_REQUESTUNMUTE_OK_OK"      = "Unmute";
+
+"MEETING_ASK_TO_UNMUTE_TITLE" = "ask to unmute";
+
+"MEETING_ROSTER_CELLVIEW_DES"     = "Unmute";
+"MEETING_ROSTER_CELLVIEW_OK"      = "Agree";
+"MEETING_ROSTER_CELLVIEW_ALL_OK"  = "Agree All";
+"MEETING_ROSTER_CELLVIEW_REQUESTSEND" = "Request sent successfully";
+"MEETING_ROSTER_CELLVIEW_MESSAGE" = "Agreed the request";
+"MEETING_ROSTER_UNMUTEREUQEST_LISTVIEW_TITLE" = "Participant’s Requests";
+"MEETING_ROSTER_LISTVIEW_DEFAULT_CONTENT" = "No requests";
+"MEETING_ROSTER_UNMUTEREUQEST_LISTVIEW_View" = "View";
+
+"MEETING_ROSTER_LISTVIEW_PIN"   = "Pin";
+"MEETING_ROSTER_LISTVIEW_UNPIN" = "Unpin";
+"MEETING_ROSTER_LISTVIEW_PIN_SUCCESS"   = "The screen is pinned";
+"MEETING_ROSTER_LISTVIEW_UNPIN_SUCCESS" = "The screen is unpinned";
+"MEETING_ROSTER_LISTVIEW_PIN_ME"        = "You are pinned by the host";
+"MEETING_ROSTER_LISTVIEW_UNPIN_ME"      = "You are unpinned by the host";
+"MEETING_ROSTER_LISTVIEW_LECTURER"      = "Lecturer";
+
+"MEETING_STOP_LIVE_TITLE"        = "Audiences are watching the live, are you sure to end the live?";
+"MEETING_STOP_RECORD_TITLE"      = "End Cloud Recording？";
+"MEETING_STOP_RECORD_MESSAGE"    = "After recording ended, go to “SQ MeetingCE Webportal-Meeting Recording” to check recorded files.";
+"MEETING_STOP_LIVE_BUTTON"       = "End";
+"MEETING_STOP_LIVE_SHARE"        = "Share";
+
+"MEETING_START_ALLMUTE"  = "Mute all successfully";
+"MEETING_CANCEL_ALLMUTE" = "Unmute all successfully";
+
+"RECORDING_SERVICE_ERROR" = "Service Error";
+"SHENQI_WEBPORTAL_TOVIEW" = "Access the following SQMeeting Web Portal with a computer browser to view:";
+
+"MEETING_REMINDER_IGNORE"             = "Ignore";
+"MEETING_REMINDER_MEETINGALERTNUMBER" = "Meeting Reminder";
+"MEETING_REMINDER_MEETINGOWNER"       = "Creator";
+"MEETING_REMINDER_CALENDAR"           = "Save to System Calendar";
+"MEETING_REMINDER_CALENDAR_ADDOK"     = "Saved successfully";
+"MEETING_REMINDER_REPEAT_MEETING"     = "You are in a meeting currently. If you need to join other meeting, Please exit the current meeting first.";
+"MEETING_REMINDER_ACCEPTMEETING"      = "Receive Meeting Reminders";
+"MEETING_REMINDER_ALERTTITLE"         = "Enable Meeting Reminders";
+"MEETING_REMINDER_ALERTCONTENT"       = "Turn on \"Allow Notifications\" of the system settings to receive meeting reminders.";
+"MEETING_REMINDER_ALERTGO"            = "Go to Settings";
+
+
+"MEETING_LOG_TITLE"     =  "Problem Diagnosis";
+"MEETING_LOG_CONTENT"   =  "If you encounted an error while using App, please upload log to help us locate and solve the problem. Thank you!";
+"MEETING_LOG_TEXTVIEW_DEFIAULT"   =  "   Please describe what went wrong（required,within 100 words）";
+"MEETING_LOG_UPLOADBUTTON"        =  "Upload Log";
+"MEETING_LOG_PLEASE_ISSUE"        =  "Please describe the problem";
+"MEETING_LOG_UPLOADING"      = "Uploading";
+"MEETING_LOG_UPLOAD_DONE"    = "Uploaded successfully";
+"MEETING_LOG_UPLOAD_ERROR"   = "Upload failed, please try again";
+"MEETING_LOG_CANCEL_UPLOAD"  = "Cancel Upload";
+"MEETING_LOG_UPLOAD_GOBACK"  = "Return";
+"MEETING_LOG_UPLOAD_AGAIN"   = "Re Upload";
+"MEETING_LOG_UPLOAD_SPEED"   = "speed";
+"MEETING_LOG_CANCEL_UPLOADDONE" = "Cancel upload successfully";
+
+
+"MEETING_REMOTEPEOPLEVIDEO_STOP"            = "Stop Receiving Videos";
+"MEETING_REMOTEPEOPLEVIDEO_RECEIVING"       = "Receiving Videos";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_STOP"      = "You have stopped receiving videos";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_RECEIVING" = "You have started receiving videos";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_MESSAGE"   = "Your network is not good now. To ensure the quality of the meeting, you can stop the video.";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_CANCLE"    = "Ignore";
+"MEETING_REMOTEPEOPLEVIDEO_ALERT_OK"        = "Stop Video";
+
+"CONTENT_UPRATE_ERROR_MESSAGE"  =  "System restricts the content sharing ability for Bad Network State.";
+
+"APP_UPDATE_MESSAGE" = "What's New in SQ MeetingCE %@：";
+"APP_UPDATE_CONTENT" = "1. Scheduling recurrent meetings\n\n2. Add meeting to the meeting list through invitation connection\n\n3. In-call mic volume meter\n\n4. Fix issues";
+
+/**
+ 3.3
+ */
+"recurrence_frequency"  = "Frequency"; //Frequency
+"recurrence_end_series"  = "End Series"; //End Series
+"recurrence_no"  = "NO"; //NO
+"recurrence_daily"  = "Daily"; //Daily
+"recurrence_weekly"  = "Weekly"; //Weekly
+"recurrence_monthly"  = "Monthly"; //Monthly
+"recurrence_everyDays"  = "Every %@ days"; //Every %@ days
+"recurrence_everyWeeks"  = "Every %@ weeks"; //Every %@ weeks
+"recurrence_everyMonths"  = "Every %@ months"; //Every %@ months
+"recurrence_endSeries"  = "End Series"; //End Series
+"recurrence_recurEvery"  = "Eecur every"; //Eecur every
+"recurrence_every"  = "Every"; //Every %@ days
+"recurrence_days"  = "day(s)"; //day(s)
+"recurrence_weeks"  = "week(s)"; //week(s)
+"recurrence_months"  = "month(s)"; //month(s)
+"recurrence_dueDate"  = "Due Date"; //Due Date
+"recurrence_unableCancel"  = "Unable to cancel the selected meeting start date"; //Unable to cancel the selected meeting start date
+"recurrence_sun"  = "Sun"; //Sun
+"recurrence_mon"  = "Mon"; //Mon
+"recurrence_tue"  = "Tue"; //Tue
+"recurrence_wed"  = "Wed"; //Wed
+"recurrence_thu"  = "Thu"; //Thu
+"recurrence_fri"  = "Fri"; //Fri
+"recurrence_sat"  = "Sat"; //Sat
+"recurrence_selectWeek"  = "Select the repeat day(s) of the week"; //Select the repeat day(s) of the week
+"recurrence_selectMoth"  = "Select the repeat date(s)"; //Select the repeat date(s)
+"recurrence_meetingWillOn"  = "The meeting will repeat "; //The meeting will repeat on
+"recurrence_meetingWillWeeks"  = "The meeting will repeat on "; //The meeting will repeat on
+"recurrence_scheduledOK"  = "Scheduled successfully"; //Scheduled successfully
+"recurrence_recurrence"  = "Recurrence"; //Recurrence
+"recurrence_recurring"  = " Recurring "; //Recurring
+"recurrence_remainingmeetings"  = " %@ remaining meetings"; // %@ remaining meetings
+"recurrence_editCurrent"  = "Edit Current Meeting"; //Edit Current Meeting
+"recurrence_editRecurring"  = "Edit Recurring Meeting"; //Edit Recurring Meeting
+"recurrence_cancelMeeting"  = "Cancel Recurring Meeting？"; // Cancel Recurring Meeting？
+"recurrence_cancleEntireWell"  = "  Cancel the entire series as well"; // Cancel the entire series as well
+"recurrence_allNoJoin"  = "All participants can not join this meeting once canceled"; // All participants can not join this meeting once canceled
+"recurrence_editRecurring2"  = "Edit Recurring Meeting"; //Edit Recurring Meeting
+"recurrence_cacaleRecurringMeeting"  = "Cancel Recurring Meeting"; //Cancel Recurring Meeting
+"recurrence_done"  = "Done";
+"recurrence_change" = "Edit";
+"recurrence_meeting"  = "Recurring Meeting";
+"recurrence_meetingStr"  = "";
+"recurrence_Scheduled"  = "Schedule";
+
+"recurrence_meetingRecurrenceDayly"  = "The meeting will be repeated daily";
+"recurrence_meetingRecurrenceMonthly" = "day %@";
+"recurrence_meetingMonthlyCycle" = "";
+"recurrence_meetingWeekly" = "%@";
+
+"recurrence_meetingStopTime" = "on %@";
+"recurrence_meetingEndStopTime" = "End on %@";
+"recurrence_meetingTotalNumber" = "%td meetings total";
+
+"meeting_url_sameaddress" = "Not supported for joining external systems";
+"meeting_url_nologin" = "Please log in first before adding meeting";
+
+"meeting_add_removeRecurrence_title" = "Remove the recurring meeting？";
+"meeting_add_removeRecurrence_content" = "You will remove this recurring meeting from the meeting list";
+"meeting_add_removeRecurrence" = "Remove";
+"meeting_add_RecurrenceSuccess" = "Added to the meeting list successfully";
+"meeting_add_RecurrenceError" = "Adding to meeting list failed";
+
+"meeting_add_removeMeeting_title" = "Remove the meeting ？";
+"meeting_add_removeMeeting_content" = "You will remove this meeting from the meeting list";
+"meeting_remove_Onemeeting" = "Deleted successfully";
+"meeting_calendar_notEnabled" = "Privileges are not enabled";
+"meeting_opCaledar_setting" = "Please turn on calendar privileges in Settings";
+
+"meeting_start_time_message" = "Start time cannot be earlier than the end time of the previous meeting in recurring meeting";
+"meeting_end_time_message" = "End time cannot be later than the start time of the next meeting in recurring meeting";
+"meeting_joining_time" = "Any time";
+"meeting_early_joining_time" = "Early joining time";
+"meeting_show_floating" = "Floating";
+"meeting_share_inMeeting" = " In Meeting";
+"meeting_share_shareing" = " Sharing";
+"app_website_url" = "Website:";
+"app_Github_url" = "Github:";
