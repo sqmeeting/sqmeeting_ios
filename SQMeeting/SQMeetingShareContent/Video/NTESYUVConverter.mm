@@ -2,7 +2,6 @@
 #import "NTESVideoUtil.h"
 #import "libyuv.h"
 
-
 @implementation NTESYUVConverter
 
 + (NTESI420Frame *)I420ScaleWithSourceI420Frame:(NTESI420Frame *)I420Frame
@@ -38,7 +37,7 @@
     if (pixelBuffer == NULL) {
         return nil;
     }
-        
+    
     CVPixelBufferLockBaseAddress( pixelBuffer, 0 );
     
     OSType sourcePixelFormat = CVPixelBufferGetPixelFormatType( pixelBuffer );
@@ -95,14 +94,13 @@
     
     if (error) {
         CVPixelBufferUnlockBaseAddress( pixelBuffer, 0 );
-        NSLog(@"error convert pixel buffer to i420 with error %d", error);
         return nil;
     }
     else {
         rowSize = [convertedI420Frame strideOfPlane:NTESI420FramePlaneY];
         pixel = convertedI420Frame.data;
     }
- 
+    
     CMVideoDimensions inputDimens = {(int32_t)bufferWidth, (int32_t)bufferHeight};
     CMVideoDimensions outputDimens = [NTESVideoUtil outputVideoDimensEnhanced:inputDimens crop:cropRatio];
     CMVideoDimensions sizeDimens = {(int32_t)size.width, (int32_t)size.height};
@@ -117,14 +115,12 @@
     if (cropY % 2) {
         cropY += 1;
     }
-    float scale = targetDimens.width*1.0/outputDimens.width;
     
     NTESI420Frame *i420Frame;
     i420Frame = [[NTESI420Frame alloc] initWithWidth:(int)bufferWidth height:(int)bufferHeight];
     
     int dstWidth, dstHeight;
     libyuv::RotationModeEnum rotateMode = [NTESYUVConverter rotateMode:orientation];
-  
     dstWidth = i420Frame.height;
     dstHeight = i420Frame.width;
     
@@ -139,7 +135,7 @@
                        i420Frame.width, i420Frame.height,
                        rotateMode);
     i420Frame = rotatedI420Frame;
-
+    
     CVPixelBufferUnlockBaseAddress( pixelBuffer, 0 );
     
     return i420Frame;
@@ -201,17 +197,13 @@
 + (libyuv::RotationModeEnum)rotateMode:(NTESVideoPackOrientation)orientation {
     switch (orientation) {
         case NTESVideoPackOrientationPortraitUpsideDown:
-            NSLog(@"libyuv::kRotate180");
             return libyuv::kRotate270;
         case NTESVideoPackOrientationLandscapeLeft:
-            NSLog(@"libyuv::kRotate90");
             return libyuv::kRotate90;
         case NTESVideoPackOrientationLandscapeRight:
-            NSLog(@"libyuv::kRotate270");
             return libyuv::kRotate270;
         case NTESVideoPackOrientationPortrait:
         default:
-            NSLog(@"libyuv::kRotate0");
             return libyuv::kRotate90;
     }
 }

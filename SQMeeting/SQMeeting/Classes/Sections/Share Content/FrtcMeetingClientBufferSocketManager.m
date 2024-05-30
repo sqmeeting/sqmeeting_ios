@@ -62,7 +62,7 @@
     if([self.socket enableBackgroundingOnSocket]) {
     } else {
     }
-        
+    
     if (error == nil) {
         self.connected = YES;
     } else {
@@ -139,6 +139,7 @@
 
 
 - (void)handleRecvBuffer {
+    
     if (!self.sockets.count) {
         return;
     }
@@ -188,7 +189,6 @@
         NTESPacketHead head;
         head.service_id = 0;
         head.command_id = 1;
-        head.data_len = 0;
         head.version = 0;
         NSString *str = [NSString stringWithFormat:@"%d", [setting intValue]];
         [socket writeData:[NTESSocketPacket packetWithBuffer:[str dataUsingEncoding:NSUTF8StringEncoding] head:&head] withTimeout:-1 tag:0];
@@ -220,12 +220,12 @@
         if (sampleBuffer == NULL) {
             return;
         }
-                
+        
+        CFRelease(sampleBuffer);
+        
         if(self.dataReceived) {
             self.dataReceived(frame.data, frame.width, frame.height, kCVPixelFormatType_420YpCbCr8BiPlanarFullRange, self->roration);
         }
-        
-        CFRelease(sampleBuffer);
     });
     
 }
