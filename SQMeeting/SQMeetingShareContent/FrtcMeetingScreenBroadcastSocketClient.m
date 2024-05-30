@@ -12,8 +12,8 @@
 
 @interface FrtcMeetingScreenBroadcastSocketClient()<GCDAsyncSocketDelegate>
 
-@property (nonatomic, assign) CGFloat captureCutRation;
-@property (nonatomic, assign) CGSize  captureSize;
+@property (nonatomic, assign) CGFloat cropRate;
+@property (nonatomic, assign) CGSize  targetSize;
 @property (nonatomic, assign) NTESVideoPackOrientation orientation;
 
 @property (nonatomic, copy) NSString *ip;
@@ -41,25 +41,16 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shareInstance = [[self alloc] init];
+        shareInstance.targetSize = CGSizeMake(720, 1280);
+        shareInstance.cropRate = 9.0/16;
+        shareInstance.orientation = NTESVideoPackOrientationPortrait;
+        shareInstance.ip = @"127.0.0.1";
+        shareInstance.serverPort = @"8898";
+        shareInstance.clientPort = [NSString stringWithFormat:@"%d", arc4random()%9999];
+        shareInstance.videoQueue = dispatch_queue_create("BROADCAST_SOCKET_WRITE_VIDEO_QUEUE", DISPATCH_QUEUE_SERIAL);
     });
     
     return shareInstance;
-}
-
-- (instancetype)init {
-    self = [super init];
-    
-    if(self) {
-        self.captureSize = CGSizeMake(720, 1280);
-        self.captureCutRation = 9.0/16;
-        self.orientation = NTESVideoPackOrientationPortrait;
-        self.ip = @"127.0.0.1";
-        self.serverPort = @"8898";
-        self.clientPort = [NSString stringWithFormat:@"%d", arc4random()%9999];
-        self.videoQueue = dispatch_queue_create("BROADCAST_SOCKET_WRITE_VIDEO_QUEUE", DISPATCH_QUEUE_SERIAL);
-    }
-    
-    return self;
 }
 
 - (void)setUpSocket {
@@ -88,6 +79,7 @@
        }
 }
 
+#pragma mark - 处理分辨率切换等
 - (void)onRecvData:(NSData *)data head:(NTESPacketHead *)head {
     if (!data) {
         return;
@@ -101,25 +93,25 @@
             int qualit = [qualityStr intValue];
             switch (qualit) {
                 case 0:
-                    self.captureSize = CGSizeMake(480, 640);
+                    self.targetSize = CGSizeMake(480, 640);
                     break;
                 case 1:
-                    self.captureSize = CGSizeMake(144, 177);
+                    self.targetSize = CGSizeMake(144, 177);
                     break;
                 case 2:
-                    self.captureSize = CGSizeMake(288, 352);
+                    self.targetSize = CGSizeMake(288, 352);
                     break;
                 case 3:
-                    self.captureSize = CGSizeMake(320, 480);
+                    self.targetSize = CGSizeMake(320, 480);
                     break;
                 case 4:
-                    self.captureSize = CGSizeMake(480, 640);
+                    self.targetSize = CGSizeMake(480, 640);
                     break;
                 case 5:
-                    self.captureSize = CGSizeMake(540, 960);
+                    self.targetSize = CGSizeMake(540, 960);
                     break;
                 case 6:
-                    self.captureSize = CGSizeMake(720, 1280);
+                    self.targetSize = CGSizeMake(720, 1280);
                     break;
                 default:
                     break;
@@ -156,6 +148,7 @@
 }
 
 -(void)sendData:(CMSampleBufferRef)sampleBuffer {
+    
     CGImagePropertyOrientation oritation = ((__bridge NSNumber *)CMGetAttachment(sampleBuffer, (__bridge CFStringRef)RPVideoSampleOrientationKey, NULL)).unsignedIntValue;
     if(oritation == kCGImagePropertyOrientationRight) {
         self.orientation = NTESVideoPackOrientationLandscapeRight;
@@ -173,13 +166,12 @@
         return;
     }
     
-    
-    dispatch_async(self.videoQueue, ^{ // queue optimal
+    dispatch_async(self.videoQueue, ^{
         @autoreleasepool {
             NTESI420Frame *videoFrame = nil;
             videoFrame = [NTESYUVConverter pixelBufferToI420:pixelBuffer
-                                                    withCrop:self.captureCutRation
-                                                  targetSize:self.captureSize
+                                            withCrop:self.cropRate
+                                          targetSize:self.targetSize
                                       andOrientation:self.orientation];
             CFRelease(sampleBuffer);
     
@@ -207,7 +199,7 @@
     if(kernelReturn == KERN_SUCCESS) {
         memoryUsageInByte = (int64_t) vmInfo.phys_footprint;
     }
-        
+    
     return memoryUsageInByte;
 }
 
@@ -222,15 +214,13 @@
     if (self.evenlyMem > 0
         && ((curMem - self.evenlyMem) > (5 * 1024 * 1024)
             ||curMem > 40 * 1024 * 1024)) {
-        //当前内存暴增2M以上，或者总共超过45M，则不处理
-        NSLog(@"retrun cur mem ");
         
         return;
     }
-    
+        
     NSTimeInterval current = [NSDate timeIntervalSinceReferenceDate] * 1000;
     
-    if (current - self.timeStamp < CAPTURE_DESKTOP_INTERVAL) {
+    if ( current - self.timeStamp < CAPTURE_DESKTOP_INTERVAL ) {
         return;
     } else {
         self.timeStamp = current;
@@ -298,6 +288,7 @@
 }
 
 #pragma mark - Socket
+
 - (void)socket:(GCDAsyncSocket *)sock didConnectToUrl:(NSURL *)url {
     [self.socket readDataWithTimeout:-1 tag:0];
 }
@@ -369,3 +360,4 @@
 }
 
 @end
+

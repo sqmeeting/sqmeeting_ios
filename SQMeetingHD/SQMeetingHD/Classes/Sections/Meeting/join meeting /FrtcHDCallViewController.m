@@ -290,10 +290,10 @@
         [self.navigationController.view hideToastActivity];
         self.callButton.enabled = YES;
     } withCallFailureBlock:^(FRTCMeetingStatusReason status, NSString * _Nonnull errMsg) {
+        [self.navigationController.view hideToastActivity];
         if (kStringIsEmpty(errMsg)) { return; }
         @StrongObj(self)
         self.callButton.enabled = YES;
-        [self.navigationController.view hideToastActivity];
     } withInputPassCodeCallBack:^{
         self.callButton.enabled = YES;
         [self.navigationController.view hideToastActivity];
