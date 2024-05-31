@@ -62,11 +62,11 @@
 		B6AE4818275B752A00FAF60C /* UIImage+Add.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AE4817275B752A00FAF60C /* UIImage+Add.m */; };
 		D193E0652BDBA54E00B0BCB5 /* util_ios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D193E0632BDBA54E00B0BCB5 /* util_ios.cpp */; };
 		D1B9AD462BDF2A7500D97CAD /* video_transfer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D1B9AD452BDF2A7500D97CAD /* video_transfer.mm */; };
-		D7191FD32BFC92D700FFE98E /* RtcCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D193E05B2BDBA0F400B0BCB5 /* RtcCommon.framework */; platformFilter = ios; };
 		D7420FD52BF307FD00FA5C48 /* ring_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7420FD22BF307FD00FA5C48 /* ring_buffer.cpp */; };
 		D7420FD82BF35E0F00FA5C48 /* ring_lock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7420FD62BF35E0F00FA5C48 /* ring_lock.cpp */; };
 		D786E3652BD1162C00C96668 /* common_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D786E3622BD1162C00C96668 /* common_interface.cpp */; };
 		D786E3662BD1162C00C96668 /* object_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D786E3632BD1162C00C96668 /* object_impl.cpp */; };
+		D7B473A92C09B18C002504F2 /* RtcCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D193E05B2BDBA0F400B0BCB5 /* RtcCommon.framework */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -217,7 +217,7 @@
 				22B3494025709D41006E4EA6 /* ReplayKit.framework in Frameworks */,
 				AF6CEC0324B6FA4D00088C53 /* OpenGLES.framework in Frameworks */,
 				3AB014342ABADE0700C8288B /* libAFNetWork.a in Frameworks */,
-				D7191FD32BFC92D700FFE98E /* RtcCommon.framework in Frameworks */,
+				D7B473A92C09B18C002504F2 /* RtcCommon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
