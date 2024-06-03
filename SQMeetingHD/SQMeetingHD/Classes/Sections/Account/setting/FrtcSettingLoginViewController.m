@@ -273,13 +273,13 @@
 - (UIButton *)serviceAgreementBtn{
     if (!_serviceAgreementBtn) {
         _serviceAgreementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_serviceAgreementBtn setTitle:[NSString stringWithFormat:@"%@ https://shenqi.isgo.com",FLocalized(@"app_website_url", nil)] forState:UIControlStateNormal];
+        [_serviceAgreementBtn setTitle:[NSString stringWithFormat:@"%@ %@",FLocalized(@"app_website_url", nil),kAppWebsiteUrl] forState:UIControlStateNormal];
         [_serviceAgreementBtn setTitleColor:kMainColor forState:UIControlStateNormal];
         _serviceAgreementBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
         [_serviceAgreementBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://shenqi.isgo.com"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kAppWebsiteUrl]];
 #pragma clang diagnostic pop
         }];
         [self.contentView addSubview:_serviceAgreementBtn];
@@ -290,13 +290,13 @@
 - (UIButton *)agreementBtn {
     if (!_agreementBtn) {
         _agreementBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_agreementBtn setTitle:[NSString stringWithFormat:@"%@ https://github.com/sqmeeting",FLocalized(@"app_Github_url", nil)] forState:UIControlStateNormal];
+        [_agreementBtn setTitle:[NSString stringWithFormat:@"%@ %@",FLocalized(@"app_Github_url", nil),kAppGithubUrl] forState:UIControlStateNormal];
         [_agreementBtn setTitleColor:kMainColor forState:UIControlStateNormal];
         _agreementBtn.titleLabel.font = [UIFont systemFontOfSize:14.f];
         [_agreementBtn addBlockForControlEvents:UIControlEventTouchUpInside block:^(id  _Nonnull sender) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/sqmeeting"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:kAppGithubUrl]];
 #pragma clang diagnostic pop
         }];
         [self.contentView addSubview:_agreementBtn];

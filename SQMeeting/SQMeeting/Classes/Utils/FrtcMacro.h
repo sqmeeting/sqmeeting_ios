@@ -101,4 +101,7 @@
 
 #define kDafaultRecurrenceNumber 6
 
+#define kAppWebsiteUrl   @"https://shenqi.internetware.cn"
+#define kAppGithubUrl    @"https://github.com/sqmeeting"
+
 #endif /* FMacro_h */
