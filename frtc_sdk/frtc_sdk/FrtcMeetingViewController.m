@@ -130,12 +130,15 @@
     [super viewDidAppear:animated];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [kFrtcCallShared f_InfoLog:@"[iOS Live] frtc meetinfg view page"];
-        if ([self.meetingModel.meetingRecordingStatus isEqualToString:@"NOT_STARTED"] &&
-            [self.meetingModel.meetingLiveStatus isEqualToString:@"NOT_STARTED"]) { } else {
+        NSString *started_not = @"NOT_STARTED";
+        if ([self.meetingModel.meetingRecordingStatus isEqualToString:started_not] &&
+            [self.meetingModel.meetingLiveStatus isEqualToString:started_not]) { } else {
             [self setRecordingStatus:self.meetingModel.meetingRecordingStatus
                           liveStatus:self.meetingModel.meetingLiveStatus
                       liveMeetingUrl:self.meetingModel.meetingLiveMeetingUrl
                       liveMeetingPwd:self.meetingModel.meetingLiveMeetingPwd];
+            self.meetingModel.meetingRecordingStatus = started_not;
+            self.meetingModel.meetingLiveStatus = started_not;
         }
         UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].windows.firstObject.windowScene.interfaceOrientation;
         if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
