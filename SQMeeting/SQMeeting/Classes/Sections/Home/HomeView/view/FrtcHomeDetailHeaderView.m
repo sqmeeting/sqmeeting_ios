@@ -45,7 +45,6 @@
     self.meetingNameLabel.text = detailModel.meeting_name;
     if (detailModel.isRecurrence) {
         self.headerView.hidden = NO;
-        self.heaer_duplicateLabel.text = detailModel.recurrenceInterval_result;
     }else{
         self.headerView.hidden = YES;
         [self.meetingNameLabel mas_remakeConstraints:^(MASConstraintMaker *make) {
