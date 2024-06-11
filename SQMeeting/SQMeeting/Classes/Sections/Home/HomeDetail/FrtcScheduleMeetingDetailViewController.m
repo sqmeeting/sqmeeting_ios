@@ -193,7 +193,7 @@
         if (_detailInfo.isYourSelf || self.isYourSelfJoin) {
             return 4 ;
         }
-        return 2;
+        return 3;
     }
     return _dataSore.count;
 }
@@ -233,15 +233,15 @@
             [customBtn setTitle:NSLocalizedString(@"meeting_join", nil) forState:UIControlStateNormal];
             [customBtn setBackgroundImage:[UIImage imageFromColor:kMainColor] forState:UIControlStateNormal];
         }else if (indexPath.row == 1 ) {
+            [customBtn setTitle:NSLocalizedString(@"meeting_copy_info", nil) forState:UIControlStateNormal];
+            [customBtn setTitleColor:kMainColor forState:UIControlStateNormal];
+        }else if (indexPath.row == 2 ) {
             if (_detailInfo.isYourSelf || self.isYourSelfJoin) {
-                [customBtn setTitle:NSLocalizedString(@"meeting_copy_info", nil) forState:UIControlStateNormal];
-                [customBtn setTitleColor:kMainColor forState:UIControlStateNormal];
+                [customBtn setTitle:self.isYourSelfJoin ? FLocalized(@"meeting_add_removeRecurrence", nil) : NSLocalizedString(@"meeting_cancel", nil) forState:UIControlStateNormal];
+                [customBtn setTitleColor:UIColor.redColor forState:UIControlStateNormal];
             }else{
                 [self setUpCustomBottonAppearance:customBtn];
             }
-        }else if (indexPath.row == 2 ) {
-            [customBtn setTitle:self.isYourSelfJoin ? FLocalized(@"meeting_add_removeRecurrence", nil) : NSLocalizedString(@"meeting_cancel", nil) forState:UIControlStateNormal];
-            [customBtn setTitleColor:UIColor.redColor forState:UIControlStateNormal];
         }else {
             [self setUpCustomBottonAppearance:customBtn];
         }
@@ -278,39 +278,39 @@
     }
     
     if (indexPath.section == 1 && indexPath.row == 1) {
-        if (_detailInfo.isYourSelf || self.isYourSelfJoin) {
-            [FrtcInvitationInfoManage shareInvitationMeetingInfo:_detailInfo];
-        }else{
-            [self addToCalendar];
-        }
+        [FrtcInvitationInfoManage shareInvitationMeetingInfo:_detailInfo];
     }
     
     if (indexPath.section == 1 && indexPath.row == 2) {
-        if (self.isYourSelfJoin) {
-            [self showAlertYourSelfJoinView];
-        }else{
-            @WeakObj(self);
-            if (self.detailInfo.isRecurrence) {
-                [self showRadioViewWithTitle:NSLocalizedString(@"meeting_cancel", nil)
-                                     message:NSLocalizedString(@"recurrence_cancleEntireWell", nil)
-                                cancelTitles:@[]
-                                  alerAction:^(NSInteger index, _Bool isSelect) {
-                    if (index == 1) {
-                        @StrongObj(self)
-                        [self deleteMeetingWithRecurrence:isSelect];
-                    }
-                }];
+        if (_detailInfo.isYourSelf || self.isYourSelfJoin) {
+            if (self.isYourSelfJoin) {
+                [self showAlertYourSelfJoinView];
             }else{
-                [self showAlertWithTitle:NSLocalizedString(@"meeting_cancel", nil)
-                                 message:NSLocalizedString(@"meeting_cancleNoJoin", nil)
-                            buttonTitles:@[NSLocalizedString(@"meeting_thinhAgain", nil),NSLocalizedString(@"meeting_yes", nil)]
-                              alerAction:^(NSInteger index) {
-                    if (index == 1) {
-                        @StrongObj(self)
-                        [self deleteMeetingWithRecurrence:NO];
-                    }
-                }];
+                @WeakObj(self);
+                if (self.detailInfo.isRecurrence) {
+                    [self showRadioViewWithTitle:NSLocalizedString(@"meeting_cancel", nil)
+                                         message:NSLocalizedString(@"recurrence_cancleEntireWell", nil)
+                                    cancelTitles:@[]
+                                      alerAction:^(NSInteger index, _Bool isSelect) {
+                        if (index == 1) {
+                            @StrongObj(self)
+                            [self deleteMeetingWithRecurrence:isSelect];
+                        }
+                    }];
+                }else{
+                    [self showAlertWithTitle:NSLocalizedString(@"meeting_cancel", nil)
+                                     message:NSLocalizedString(@"meeting_cancleNoJoin", nil)
+                                buttonTitles:@[NSLocalizedString(@"meeting_thinhAgain", nil),NSLocalizedString(@"meeting_yes", nil)]
+                                  alerAction:^(NSInteger index) {
+                        if (index == 1) {
+                            @StrongObj(self)
+                            [self deleteMeetingWithRecurrence:NO];
+                        }
+                    }];
+                }
             }
+        }else{
+            [self addToCalendar];
         }
     }
     

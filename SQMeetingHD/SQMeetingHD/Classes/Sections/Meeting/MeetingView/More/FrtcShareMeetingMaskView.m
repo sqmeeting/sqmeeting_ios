@@ -132,8 +132,8 @@ static FShareMeetingMaskCallBack alertViewBlock = nil;
 
 - (void)setMeetingInfo:(FHomeMeetingListModel *)meetingInfo {
     _meetingInfo = meetingInfo;
-    self.titleLable.text = [NSString stringWithFormat:@"%@%@", _meetingInfo.ownerUserName,NSLocalizedString(@"nor_meeting", nil)];
-    
+    self.titleLable.text = _meetingInfo.meetingName;
+
     NSString *userName = [FrtcUserModel fetchUserInfo].real_name;
     self.meeting_title.text = [NSString stringWithFormat:@"%@ %@", (kStringIsEmpty(userName) ? @"" : userName),NSLocalizedString(@"share_invitation", nil)];
     self.meeting_theme.text = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"meeting_theme", nil), _meetingInfo.meetingName];

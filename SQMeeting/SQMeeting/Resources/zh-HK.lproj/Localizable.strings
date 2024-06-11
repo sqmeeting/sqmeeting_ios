@@ -121,7 +121,8 @@
 "psd_two_error" = "兩次密碼不一致";
 
 "join_meeting_set_server" = "入會或登入須先設定服務器地址!";
-"nor_meeting" = "的會議";
+"nor_meeting" = "的預約會議";
+"nor_new_meeting" = "的即時會議";
 "ple_meeting_psd" = "請輸入會議密碼";
 "join_meeting_password" = "入會密碼";
 "join_finish" = "結束";

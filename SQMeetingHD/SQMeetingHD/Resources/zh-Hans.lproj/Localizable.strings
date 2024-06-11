@@ -121,7 +121,8 @@
 "psd_two_error" = "两次密码不一致";
 
 "join_meeting_set_server" = "入会或登录须先设置服务器地址!";
-"nor_meeting" = "的会议";
+"nor_meeting" = "的预约会议";
+"nor_new_meeting" = "的即时会议";
 "ple_meeting_psd" = "请输入会议密码";
 "join_meeting_password" = "入会密码";
 "join_finish" = "结束";

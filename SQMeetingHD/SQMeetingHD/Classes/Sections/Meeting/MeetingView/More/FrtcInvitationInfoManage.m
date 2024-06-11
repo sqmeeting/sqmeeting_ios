@@ -77,7 +77,7 @@
             recurrenceDays = [NSString stringWithFormat:@"(%@)",f_monthRecurrenceDate(meetinginfo.recurrenceDaysOfMonth)];
         }
         
-        NSString *recurrenceStr = [NSString stringWithFormat:@"%@: %@ - %@, %@ %@ \n",FLocalized(@"recurrence_meeting", nil),[FrtcHelpers getDateCustomStringWithTimeStr:meetinginfo.meetingStartDay],[FrtcHelpers getDateStringWithTime:meetinginfo.meetingEndDay],meetinginfo.recurrenceInterval_result,recurrenceDays];
+        NSString *recurrenceStr = [NSString stringWithFormat:@"%@: %@ - %@, %@ %@ \n",FLocalized(@"recurrence_meeting", nil),[FrtcHelpers getDateCustomStringWithTimeStr:meetinginfo.meetingStartDay],[FrtcHelpers getDateCustomStringWithTimeStr:meetinginfo.meetingEndDay],meetinginfo.recurrenceInterval_result,recurrenceDays];
         [meetingInfoCopy appendFormat:@"%@",recurrenceStr];
     }
     
