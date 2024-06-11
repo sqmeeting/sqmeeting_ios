@@ -31,7 +31,7 @@
 
 - (void)requestScheduleMeeting {
     [MBProgressHUD showActivityMessage:@""];
-    NSString *meetingName = [NSString stringWithFormat:@"%@%@",[FrtcUserModel fetchUserInfo].real_name,NSLocalizedString(@"nor_meeting", nil)];
+    NSString *meetingName = [NSString stringWithFormat:@"%@%@",[FrtcUserModel fetchUserInfo].real_name,NSLocalizedString(@"nor_new_meeting", nil)];
     [[FrtcManagement sharedManagement] scheduleMeetingWithUsertoken:[FrtcUserModel fetchUserInfo].user_token meetingName:meetingName scheduleCompletionHandler:^(NSDictionary * _Nonnull meetingInfo) {
         [MBProgressHUD hideHUD];
         FNewMeetingScheduleMeetingInfo *info = [FNewMeetingScheduleMeetingInfo yy_modelWithDictionary:meetingInfo];

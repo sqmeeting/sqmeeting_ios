@@ -121,7 +121,8 @@
 "psd_two_error" = "Confirm password is inconsistent with new password";
 
 "join_meeting_set_server" = "Please configure server address before login or join meeting!";
-"nor_meeting" = "'s Meeting";
+"nor_meeting" = "'s Scheduled Meeting";
+"nor_new_meeting" = "'s Instant Meeting";
 "ple_meeting_psd" = "Please input meeting password";
 "join_meeting_password" = "Meeting Password";
 "join_finish" = "End";
