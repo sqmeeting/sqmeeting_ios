@@ -628,6 +628,7 @@ static FrtcCall *clientWrapper = nil;
 - (void)frtcCloseMeetingView {
     if (self.floatingWindow) {
         [self.floatingWindow destroy];
+        self.floatingWindow = nil;
         [self.meetingVC.view removeFromSuperview];
         self.meetingVC = nil;
     }
