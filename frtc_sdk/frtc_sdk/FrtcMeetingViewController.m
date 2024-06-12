@@ -142,6 +142,7 @@
         }
         UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].windows.firstObject.windowScene.interfaceOrientation;
         if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+            [kFrtcCallShared f_InfoLog:@"[Orientation] viewDidAppear"];
             self->currentVideoOrientation = VideoViewRotation_0;
         }
     });
@@ -170,12 +171,15 @@
     UIInterfaceOrientation interfaceOrientation = [UIApplication sharedApplication].windows.firstObject.windowScene.interfaceOrientation;
     switch (interfaceOrientation) {
         case UIInterfaceOrientationPortrait:
+            [kFrtcCallShared f_InfoLog:@"[Orientation] UIInterfaceOrientationPortrait"];
             currentVideoOrientation = currentVideoOrientation == VideoViewRotation_180 ?  VideoViewRotation_270 : VideoViewRotation_90;
             break;
         case UIInterfaceOrientationLandscapeRight:
+            [kFrtcCallShared f_InfoLog:@"[Orientation] UIInterfaceOrientationLandscapeRight"];
             currentVideoOrientation = VideoViewRotation_0;
             break;
         case UIInterfaceOrientationLandscapeLeft:
+            [kFrtcCallShared f_InfoLog:@"[Orientation] UIInterfaceOrientationLandscapeLeft"];
             currentVideoOrientation = VideoViewRotation_180;
             break;
         default:
@@ -329,6 +333,7 @@
         [self.meetingView.localVideoView stopRendering];
     } else {
         if (![CaptureCameraStream SingletonInstance].isStartingVideoCapture && currentVideoOrientation == VideoViewRotation_270) {
+            [kFrtcCallShared f_InfoLog:@"[Orientation] muteVideo"];
             currentVideoOrientation = VideoViewRotation_90;
         }
         [[CaptureCameraStream SingletonInstance] captureSessionStartRunning];

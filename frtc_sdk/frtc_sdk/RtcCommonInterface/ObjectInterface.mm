@@ -6,6 +6,7 @@
 #import "FrtcCall.h"
 //#include "IRender.h"
 #import <UIKit/UIKit.h>
+#import "log.h"
 
 static ObjectInterface *objectInterface = nil;
 
@@ -325,8 +326,12 @@ static ObjectInterface *objectInterface = nil;
     self.contentRequestCallBack     = contentRequestCallBack;
     
     if (isLogin) {
+        NSString *loginLog = [NSString stringWithFormat:@"address = %@, alias = %@, displayname = %@, usertoken = %@, meetingpassword = %@, callrate = %d",serverAddress,meetingAlias,displayName,userToken,meetingPassword,callRate];
+        InfoLog("[Login Join Meeting Content] %s",[loginLog UTF8String]);
         _impl->JoinMeetingLoginImpl([serverAddress UTF8String],[meetingAlias UTF8String],[displayName UTF8String], [userToken UTF8String], [meetingPassword UTF8String], callRate);
     } else {
+        NSString *loginLog = [NSString stringWithFormat:@"address = %@, alias = %@, displayname = %@, meetingpassword = %@, callrate = %d",serverAddress,meetingAlias,displayName,meetingPassword,callRate];
+        InfoLog("[no Login Join Meeting Content] %s",[loginLog UTF8String]);
         _impl->JoinMeetingNoLoginImpl([serverAddress UTF8String], [meetingAlias UTF8String], [displayName UTF8String], [meetingPassword UTF8String], callRate);
     }
 }

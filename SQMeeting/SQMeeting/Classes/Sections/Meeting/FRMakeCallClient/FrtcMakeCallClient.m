@@ -214,6 +214,8 @@ withInputPassCodeCallBack:(InputPassCodeCallBack)inputPassCodeBlock{
             self.meetingOperator = self.serverUrlSame ? operator : NO;
         }
         
+        NSString *meetingvcs = [NSString stringWithFormat:@"[] %@",meetingViewController];
+        [kFrtcCallShared f_InfoLog:meetingvcs];
         ISMLog(@"meetingViewController = %@",meetingViewController);
         self.parentViewController = meetingViewController;
         
@@ -348,6 +350,8 @@ withInputPassCodeCallBack:(InputPassCodeCallBack)inputPassCodeBlock{
 
 - (void)startReconnect {
     
+    [kFrtcCallShared f_InfoLog:@"[reconnect] startReconnect"];
+
     if (self.reconnect) {
         return;
     }
@@ -394,6 +398,8 @@ withInputPassCodeCallBack:(InputPassCodeCallBack)inputPassCodeBlock{
             [self frtcMakeCallWithCallParam:self->callParam];
         });
         count ++;
+        
+        [kFrtcCallShared f_InfoLog:[NSString stringWithFormat:@"[reconnect] count = %d",count]];
         
     } start:0 interval:15 repeats:YES async:YES];
 }

@@ -173,6 +173,7 @@ static FrtcCall *clientWrapper = nil;
 
 - (void)presentCallView {
     if (self.isReconnect) {
+        [kFrtcCallShared f_InfoLog:@"[reconnect] reconnect"];
         [self callConnected];
         self.reconnect = NO;
     }else{
@@ -227,11 +228,13 @@ static FrtcCall *clientWrapper = nil;
     if (self.isReconnect) {
         [[ObjectInterface sharedObjectInterface] muteLocalAudioObject:self.isMuteMicrophone];
     }
+    InfoLog("[ ] callConnected");
     FRTCMeetingStatusReason status = MEETING_STATUS_CONNECTED;
     self.completionHandler(MEETING_STATUS_CONNECTE, status, [self generateSuccessCallResultParam], self.meetingVC);
 }
 
 - (void)callDisconnected {
+    InfoLog("[ ] callDisconnected");
     [[FrtcAudioClient sharedAudioUnitCapture] disableAudioUnitCoreGraph];
     [[CaptureCameraStream SingletonInstance] removeVideoSession];
     self.waterMarkString = @"";
@@ -416,6 +419,7 @@ static FrtcCall *clientWrapper = nil;
             
         } remoteVideoReceivedCallBack:^(NSString *mediaID) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                InfoLog("[iOS mediaID] %s",[mediaID UTF8String]);
                 [[self presentedViewController] remoteVideoReceived:mediaID];
             });
             
