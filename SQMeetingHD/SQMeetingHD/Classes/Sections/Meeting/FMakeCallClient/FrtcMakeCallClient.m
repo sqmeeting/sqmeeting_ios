@@ -200,6 +200,8 @@ NSString *conferenceName;
             self.meetingOperator = self.serverUrlSame ? operator : NO;
         }
         
+        NSString *meetingvcs = [NSString stringWithFormat:@"[] %@",meetingViewController];
+        [kFrtcCallShared f_InfoLog:meetingvcs];
         ISMLog(@"meetingViewController = %@",meetingViewController);
         self.parentViewController = meetingViewController;
         
@@ -1203,16 +1205,20 @@ NSString *conferenceName;
 }
 
 - (void)muteMicroPhone:(BOOL)mute {
+    [kFrtcCallShared f_InfoLog:@"[muteMicroPhone] begin"];
     if (!self.allowUserUnMute && self.toolBarView.btnMuteMicrophone.isSelected == YES && !self.isMeetingOperator) {
         @WeakObj(self)
+        [kFrtcCallShared f_InfoLog:@"[muteMicroPhone] alert view"];
         FrtcCAlertView *alertView = [[FrtcCAlertView alloc]init];
         if (self.isUnmuteRequesting) {
+            [kFrtcCallShared f_InfoLog:@"[muteMicroPhone] alert view 001"];
             [alertView showAlertWithTitle:NSLocalizedString(@"MEETING_ASK_FOR_UNMUTE_OK_TITLE", nil)
                              withSubtitle:NSLocalizedString(@"MEETING_ASK_FOR_UNMUTE_OK_MESSAGE", nil)
                           withCustomImage:nil
                       withDoneButtonTitle:NSLocalizedString(@"string_ok", nil)
                                andButtons:nil];
         }else {
+            [kFrtcCallShared f_InfoLog:@"[muteMicroPhone] alert view 002"];
             [alertView showAlertWithTitle:NSLocalizedString(@"MEETING_ASK_FOR_UNMUTE_ALERT_TITLE", nil)
                              withSubtitle:NSLocalizedString(@"MEETING_ASK_FOR_UNMUTE_ALERT_MESSAGE", nil)
                           withCustomImage:nil
@@ -1230,6 +1236,7 @@ NSString *conferenceName;
             }];
         }
     }else{
+        [kFrtcCallShared f_InfoLog:@"[muteMicroPhone] begin 001"];
         [self frtcMuteMicroPhone:mute];
     }
 }

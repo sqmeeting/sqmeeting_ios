@@ -40,6 +40,7 @@ static void StopRecordScreenCallback(CFNotificationCenterRef center,
     NSObject *sender = (__bridge NSObject *)observer;
     NSDictionary *info = CFBridgingRelease(userInfo);
     
+    [kFrtcCallShared f_InfoLog:[NSString stringWithFormat:@"[record screen] %@",info]];
     NSLog(@"userInfo %@  %@",userInfo,info);
     
     NSDictionary *notiUserInfo = @{@"identifier":identifier};
