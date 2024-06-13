@@ -337,7 +337,9 @@ static FrtcCall *clientWrapper = nil;
             if([tempServerAddress isEqualToString:serverAddress]) {
             } else {
                 login = NO;
-                callParam.clientName = [UIDevice currentDevice].name;
+                if (kStringIsEmpty(callParam.clientName)) {
+                    callParam.clientName = [UIDevice currentDevice].name;
+                }
             }
         }
         

@@ -267,11 +267,11 @@ NSString *conferenceName;
     self.meetingInfo.meetingName    = callSuccessParam.conferenceName;
     self.meetingInfo.meetingPassword = param.password;
     self.meetingInfo.ownerID       = callSuccessParam.ownerID;
-    if (callSuccessParam.scheduleStartTime == 0) {
-        self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
-    }else{
-        self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleStartTime];
-    }
+    //if (callSuccessParam.scheduleStartTime == 0) {
+    self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
+    //}else{
+    //self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleStartTime];
+    //}
     self.meetingInfo.meetingEndTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleEndTime];
     self.meetingInfo.ownerUserName = callSuccessParam.ownerName;
     self.meetingInfo.meetingUrl = callSuccessParam.meetingUrl;
@@ -1103,6 +1103,7 @@ NSString *conferenceName;
 
 #pragma mark -- EndMeetingControllerDelegate
 - (void)endMeetingClicked:(BOOL)stop {
+    [kFrtcCallShared f_InfoLog:@"[stop] end meeting"];
     [self cancelTimer];
     self.meetingInfo.meetingTime   = self.topLayoutBarView.meetingTimeLable.text;
     NSString *meetingPassword = [[FrtcUserDefault sharedUserDefault] objectForKey:MEETING_PASSWORD];
@@ -1130,6 +1131,7 @@ NSString *conferenceName;
 }
 
 - (void)cleanUp {
+    [kFrtcCallShared f_InfoLog:@"[stop] start meeting cleanUp"];
     [self shareContent:NO];
     self.reconnect = NO;
     FrtcManager.inMeeting = NO;
@@ -1151,7 +1153,19 @@ NSString *conferenceName;
     self.reconnect = NO;
     self.unmuteRequesting = NO;
     self.showRequestUnMuteView = NO;
-    [[AVAudioSession sharedInstance] setActive:NO error:nil];
+    [self stopAudioSession];
+    NSString *audioPlaying = [NSString stringWithFormat:@"[stop]  Is other audio playing: %d", [AVAudioSession sharedInstance].isOtherAudioPlaying];
+    [kFrtcCallShared f_InfoLog:audioPlaying];
+    [kFrtcCallShared f_InfoLog:@"[stop] end meeting cleanUp"];
+}
+
+- (void)stopAudioSession {
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    NSError *error = nil;
+    BOOL success = [audioSession setActive:NO withOptions:AVAudioSessionSetActiveOptionNotifyOthersOnDeactivation error:&error];
+    if (!success) {
+        ISMLog(@"Error deactivating audio session: %@", error);
+    }
 }
 #pragma mark -- StaticsViewControllerDelegate
 
