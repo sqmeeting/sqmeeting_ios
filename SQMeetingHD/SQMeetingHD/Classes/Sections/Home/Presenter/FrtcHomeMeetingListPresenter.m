@@ -50,7 +50,7 @@
     
     FHomeDetailMeetingInfo *info2 = [FHomeDetailMeetingInfo new];
     info2.title = NSLocalizedString(@"meeting_time", nil);
-    info2.content = [FrtcHelpers getDateStringWithTimeStr:model.meetingStartTime];
+    info2.content = [FrtcHelpers getDateStringWithTimeStr:model.historyMeetingStartTime];
     
     FHomeDetailMeetingInfo *info3 = [FHomeDetailMeetingInfo new];
     info3.title = NSLocalizedString(@"call_number", nil);

@@ -267,11 +267,12 @@ NSString *conferenceName;
     self.meetingInfo.meetingName    = callSuccessParam.conferenceName;
     self.meetingInfo.meetingPassword = param.password;
     self.meetingInfo.ownerID       = callSuccessParam.ownerID;
-    //if (callSuccessParam.scheduleStartTime == 0) {
-    self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
-    //}else{
-    //self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleStartTime];
-    //}
+    if (callSuccessParam.scheduleStartTime == 0) {
+        self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
+    }else{
+        self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleStartTime];
+    }
+    self.meetingInfo.historyMeetingStartTime = [FrtcHelpers currentTimeStr];
     self.meetingInfo.meetingEndTime = [NSString stringWithFormat:@"%lld",callSuccessParam.scheduleEndTime];
     self.meetingInfo.ownerUserName = callSuccessParam.ownerName;
     self.meetingInfo.meetingUrl = callSuccessParam.meetingUrl;

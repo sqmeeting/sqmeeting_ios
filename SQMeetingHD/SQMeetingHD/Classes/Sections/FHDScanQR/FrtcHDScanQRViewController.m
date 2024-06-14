@@ -51,7 +51,6 @@
     
     [self setupNavigationBar];
     [self configView];
-    NSLog(@"------push the scan view controller------");
     [self setCropRect:kScanRect];
     [self performSelector:@selector(setupCamera) withObject:nil afterDelay:0.2];
     
@@ -68,7 +67,7 @@
 
 - (void)dealloc {
     NSLog(@"%s",__func__);
-    [self stop];
+    //[self stop];
     [self.preview removeFromSuperlayer];
 }
 
