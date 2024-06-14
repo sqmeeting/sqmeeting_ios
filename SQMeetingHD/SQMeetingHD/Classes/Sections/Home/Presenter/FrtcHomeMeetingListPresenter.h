@@ -8,6 +8,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *meetingNumber;
 @property (nonatomic, copy) NSString *meetingStartTime;
+@property (nonatomic, copy) NSString *historyMeetingStartTime;
 @property (nonatomic, copy) NSString *meetingEndTime;
 @property (nonatomic, copy) NSString *meetingName;
 @property (nonatomic, copy) NSString *meetingTime;

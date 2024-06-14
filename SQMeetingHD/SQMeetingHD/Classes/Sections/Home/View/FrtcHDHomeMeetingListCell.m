@@ -66,7 +66,7 @@
     _info = info;
     self.titleLabel.text =  info.meetingName;
     self.detailLabel.text = [NSString stringWithFormat:@"%@: %@",NSLocalizedString(@"call_number", nil), info.meetingNumber];
-    self.accessibilityLabel.text = [FrtcHelpers getDateStringWithTimeStr:info.meetingStartTime];
+    self.accessibilityLabel.text = [FrtcHelpers getDateStringWithTimeStr:info.historyMeetingStartTime];
 }
 
 - (void)setScheduledInfo:(FrtcScheduleDetailModel *)scheduledInfo {

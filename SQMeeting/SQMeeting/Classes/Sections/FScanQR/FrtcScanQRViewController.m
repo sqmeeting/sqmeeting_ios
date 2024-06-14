@@ -27,10 +27,7 @@
     BOOL pssswordCancle;
 }
 
-@property (strong, nonatomic)AVCaptureDeviceInput * input;
-@property (strong, nonatomic)AVCaptureMetadataOutput * output;
 @property (strong, nonatomic)AVCaptureSession * session;
-@property (strong, nonatomic)AVCaptureVideoPreviewLayer * preview;
 
 @property (nonatomic, strong) UIImageView * line;
 @property (nonatomic, strong) NSTimer * timer;
@@ -66,7 +63,6 @@
 - (void)dealloc {
     NSLog(@"%s",__func__);
     [self stop];
-    [self.preview removeFromSuperlayer];
 }
 
 -(void)configUI {
@@ -123,51 +119,6 @@
     _line.layer.speed = 1.5;
 }
 
--(void)animation1 {
-    if (upOrdown == NO) {
-        num ++;
-        _line.frame = CGRectMake(LEFT, TOP + 10 + 2 * num, 220, 2);
-        if (2 * num == 200) {
-            upOrdown = YES;
-        }
-    } else {
-        num --;
-        _line.frame = CGRectMake(LEFT, TOP + 10 + 2 * num, 220, 2);
-        if (num == 0) {
-            upOrdown = NO;
-        }
-    }
-}
-
-- (CGColorRef)createTranslucentBlackColor {
-    CGColorSpaceRef rgbSpaceRef = CGColorSpaceCreateDeviceRGB();
-    CGFloat rgbComponents[] = {0, 0, 0, 0.3};
-    CGColorRef rgbColorRef = CGColorCreate(rgbSpaceRef, rgbComponents);
-    CGColorSpaceRelease(rgbSpaceRef);
-    return rgbColorRef;
-}
-
-- (void)setCropRect:(CGRect)cropRect {
-    if (cropLayer) {
-        [cropLayer removeFromSuperlayer];
-    }
-    cropLayer = [[CAShapeLayer alloc] init];
-    CGMutablePathRef path = CGPathCreateMutable();
-    CGPathAddRect(path, nil, cropRect);
-    CGPathAddRect(path, nil, self.view.bounds);
-    
-    [cropLayer setFillRule:kCAFillRuleEvenOdd];
-    [cropLayer setPath:path];
-    
-    CGColorRef color = [self createTranslucentBlackColor];
-    [cropLayer setFillColor:color];
-    CGColorRelease(color);
-    [cropLayer setNeedsDisplay];
-    
-    [self.view.layer insertSublayer:cropLayer atIndex:0];
-    CGPathRelease(path);
-}
-
 - (void)setupCamera {
     
     AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
@@ -193,37 +144,34 @@
 
 - (void)_setupScanner {
     
-    // Device
     AVCaptureDevice * device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    // Input
-    self.input = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
-    // Output
-    self.output = [[AVCaptureMetadataOutput alloc] init];
-    [self.output setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
+    AVCaptureDeviceInput *deviceInput = [AVCaptureDeviceInput deviceInputWithDevice:device error:nil];
+    AVCaptureMetadataOutput *metadataOutput = [[AVCaptureMetadataOutput alloc] init];
+    [metadataOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
     
-    CGFloat top    = 0.1;//TOP/KScreenHeight;
-    CGFloat left   = 0.1;//LEFT/KScreenWidth;
-    CGFloat width  = 0.8;//220/KScreenWidth;
-    CGFloat height = 0.8;//220/KScreenHeight;
+    CGFloat top    = 0.1;
+    CGFloat left   = 0.1;
+    CGFloat width  = 0.8;
+    CGFloat height = 0.8;
     
-    [self.output setRectOfInterest:CGRectMake(top,left, height, width)];
+    [metadataOutput setRectOfInterest:CGRectMake(top,left, height, width)];
     
     self.session = [[AVCaptureSession alloc]init];
     [self.session setSessionPreset:AVCaptureSessionPresetHigh];
-    if ([self.session canAddInput:self.input]) {
-        [self.session addInput:self.input];
+    if ([self.session canAddInput:deviceInput]) {
+        [self.session addInput:deviceInput];
     }
     
-    if ([self.session canAddOutput:self.output]) {
-        [self.session addOutput:self.output];
+    if ([self.session canAddOutput:metadataOutput]) {
+        [self.session addOutput:metadataOutput];
     }
     
-    [self.output setMetadataObjectTypes:[NSArray arrayWithObjects:AVMetadataObjectTypeQRCode, nil]];
+    [metadataOutput setMetadataObjectTypes:[NSArray arrayWithObjects:AVMetadataObjectTypeQRCode, nil]];
     
-    self.preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];
-    self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    self.preview.frame =self.view.layer.bounds;
-    [self.view.layer insertSublayer:self.preview atIndex:0];
+    AVCaptureVideoPreviewLayer *preview =[AVCaptureVideoPreviewLayer layerWithSession:self.session];
+    preview.videoGravity = AVLayerVideoGravityResizeAspectFill;
+    preview.frame =self.view.layer.bounds;
+    [self.view.layer insertSublayer:preview atIndex:0];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self.session startRunning];
@@ -231,19 +179,12 @@
 }
 
 - (void)stop {
-    if (self.session.isRunning) {
+    if (self.session) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [self.session stopRunning];
         });
+        self.session = nil;
     }
-    
-    // [self.output setSampleBufferDelegate:nil queue:NULL];
-    [self.session removeInput:self.input];
-    [self.session removeOutput:self.output];
-    
-    self.session = nil;
-    self.input = nil;
-    self.output = nil;
 }
 
 - (void)turnOnLight:(UIButton *)sender {
@@ -307,7 +248,9 @@
     NSString *stringValue;
     
     if ([metadataObjects count] > 0) {
-        [self.session stopRunning];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self.session stopRunning];
+        });
         [self.timer setFireDate:[NSDate distantFuture]];
         
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];

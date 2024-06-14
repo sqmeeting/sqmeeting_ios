@@ -284,11 +284,12 @@ withInputPassCodeCallBack:(InputPassCodeCallBack)inputPassCodeBlock{
     self.meetingInfo.meetingNumber = callReaultParam.conferenceAlias;
     self.meetingInfo.meetingName   = callReaultParam.conferenceName;
     self.meetingInfo.ownerID       = callReaultParam.ownerID;
-    //if (callReaultParam.scheduleStartTime == 0) {
-    self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
-    //}else{
-    //self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callReaultParam.scheduleStartTime];
-    //}
+    if (callReaultParam.scheduleStartTime == 0) {
+        self.meetingInfo.meetingStartTime = [FrtcHelpers currentTimeStr];
+    }else{
+        self.meetingInfo.meetingStartTime = [NSString stringWithFormat:@"%lld",callReaultParam.scheduleStartTime];
+    }
+    self.meetingInfo.historyMeetingStartTime = [FrtcHelpers currentTimeStr];
     self.meetingInfo.meetingEndTime  = [NSString stringWithFormat:@"%lld",callReaultParam.scheduleEndTime];
     self.meetingInfo.ownerUserName   = callReaultParam.ownerName;
     self.meetingInfo.meetingUrl      = callReaultParam.meetingUrl;
