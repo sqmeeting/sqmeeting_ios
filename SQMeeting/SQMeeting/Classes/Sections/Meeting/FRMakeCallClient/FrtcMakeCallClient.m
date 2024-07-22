@@ -351,8 +351,8 @@ withInputPassCodeCallBack:(InputPassCodeCallBack)inputPassCodeBlock{
 
 - (void)startReconnect {
     
-    [kFrtcCallShared f_InfoLog:@"[reconnect] startReconnect"];
-
+    [kFrtcCallShared f_InfoLog:@"[iOS reconnect] startReconnect"];
+    ISMLog(@"[iOS reconnect] startReconnect");
     if (self.reconnect) {
         return;
     }
