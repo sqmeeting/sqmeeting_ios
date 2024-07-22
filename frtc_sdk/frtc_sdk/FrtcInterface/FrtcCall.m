@@ -175,7 +175,6 @@ static FrtcCall *clientWrapper = nil;
     if (self.isReconnect) {
         [kFrtcCallShared f_InfoLog:@"[reconnect] reconnect"];
         [self callConnected];
-        self.reconnect = NO;
     }else{
         [self showCallWindow];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -224,11 +223,14 @@ static FrtcCall *clientWrapper = nil;
 }
 
 - (void)callConnected {
+    InfoLog("[ ] enableAudioUnitCoreGraph");
     [[FrtcAudioClient sharedAudioUnitCapture] enableAudioUnitCoreGraph];
     if (self.isReconnect) {
+        self.reconnect = NO;
+        InfoLog("[reconnect] muteLocalAudioObject");
         [[ObjectInterface sharedObjectInterface] muteLocalAudioObject:self.isMuteMicrophone];
     }
-    InfoLog("[ ] callConnected");
+    InfoLog("[ ] STATUS_CONNECTED");
     FRTCMeetingStatusReason status = MEETING_STATUS_CONNECTED;
     self.completionHandler(MEETING_STATUS_CONNECTE, status, [self generateSuccessCallResultParam], self.meetingVC);
 }
