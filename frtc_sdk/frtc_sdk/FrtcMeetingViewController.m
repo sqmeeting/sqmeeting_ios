@@ -227,8 +227,10 @@
 }
 
 - (void)applicationWillEnterForeground {
+    ISMLog(@"[iOS] applicationWillEnterForeground");
     if (self.isInterruptionBegan) {
         InfoLog("[iOS] audioSessionInterruptionObserver applicationWillEnterForeground");
+        ISMLog(@"[iOS] audioSessionInterruptionObserver applicationWillEnterForeground");
         [[AVAudioSession sharedInstance] setActive:YES error:nil];
         self.interruptionBegan = NO;
         [[FrtcAudioClient sharedAudioUnitCapture] enableAudioUnitCoreGraph];
@@ -255,11 +257,13 @@
 - (void)audioSessionInterruptionObserver:(NSNotification *)notification {
     if (AVAudioSessionInterruptionTypeBegan == [notification.userInfo[AVAudioSessionInterruptionTypeKey] intValue]) {
         InfoLog("[iOS] audioSessionInterruptionObserver Interruption Began");
+        ISMLog(@"[iOS] audioSessionInterruptionObserver Interruption Began");
         self.interruptionBegan = YES;
         [[FrtcAudioClient sharedAudioUnitCapture] disableAudioUnitCoreGraph];
     }
     else if (AVAudioSessionInterruptionTypeEnded == [notification.userInfo[AVAudioSessionInterruptionTypeKey] intValue]) {
         InfoLog("[iOS] audioSessionInterruptionObserver Interruption Ended");
+        ISMLog(@"[iOS] audioSessionInterruptionObserver Interruption Ended");
         self.interruptionBegan = NO;
         [[AVAudioSession sharedInstance] setActive:YES error:nil];
         [[FrtcAudioClient sharedAudioUnitCapture] enableAudioUnitCoreGraph];

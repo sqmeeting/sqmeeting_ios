@@ -190,7 +190,7 @@ requestCompletionHandler:(RequestCompletionHandler)completionHandler
 
 #pragma mark --HTTP HEADER--
 - (NSDictionary *)HEADER {
-    return @{@"User-Agent":@"FrtcMeeting/3.4.0 ios"};
+    return @{@"User-Agent":@"FrtcMeeting/3.4.1 ios"};
 }
 
 - (NSString *)removeSpaceAndNewLine:(NSString *)str {

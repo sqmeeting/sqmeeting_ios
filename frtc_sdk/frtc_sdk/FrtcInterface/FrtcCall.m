@@ -227,7 +227,6 @@ static FrtcCall *clientWrapper = nil;
     [[FrtcAudioClient sharedAudioUnitCapture] enableAudioUnitCoreGraph];
     if (self.isReconnect) {
         self.reconnect = NO;
-        InfoLog("[reconnect] muteLocalAudioObject");
         [[ObjectInterface sharedObjectInterface] muteLocalAudioObject:self.isMuteMicrophone];
     }
     InfoLog("[ ] STATUS_CONNECTED");
@@ -237,7 +236,7 @@ static FrtcCall *clientWrapper = nil;
 
 - (void)callDisconnected {
     InfoLog("[ ] callDisconnected");
-    [[FrtcAudioClient sharedAudioUnitCapture] disableAudioUnitCoreGraph];
+    //[[FrtcAudioClient sharedAudioUnitCapture] disableAudioUnitCoreGraph];
     [[CaptureCameraStream SingletonInstance] removeVideoSession];
     self.waterMarkString = @"";
     
@@ -262,6 +261,7 @@ static FrtcCall *clientWrapper = nil;
     }else{
         if (status != MEETING_STATUS_ABORTED && status != MEETING_STATUS_MEETINGNOTEXIST && status != MEETING_STATUS_SUCCESS) {
             InfoLog("[iOS dismiss] dismissView end");
+            [[FrtcAudioClient sharedAudioUnitCapture] disableAudioUnitCoreGraph];
             [self frtcCloseMeetingView];
         }
         InfoLog("[iOS dismiss] dismissView reconnection begin 2 ");
