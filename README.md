@@ -1,32 +1,27 @@
-# SQMeeting(神旗视讯)官网
-访问[神旗视讯官网](https://shenqi.internetware.cn) 可以免费下载神旗视讯服务平台.  
-3分钟，就可以部署一套完整的企业视频会议系统. 
+# SQMeeting Official Website
+Visit the [SQMeeting Official Website](https://sqmeeting.github.io) to download the SQMeeting service platform for free.  
+Deploy a complete enterprise video conferencing system in just 3 minutes.
 
-# SQMeeting iOS 客户端
+# SQMeeting iOS Client
 
 ![screenshot](./image1.png)
 
-# 系统要求
+# System Requirements
 
-## 操作系统
+## Operating System
+Minimum iOS 13 support
 
-最低支持 iOS13
+# Build, Generate and Run
 
-# 编译生成和运行
+## Build Tools
+Xcode 15.0 or later.  
+Before building, configure the Provisioning Profile and Signing Certificate.
 
-## 编译工具
-
-Xcode 15.0 或更高版本。
-在build之前，请配置 Provisioning Profile 、Signing Certificate .
-
-## 运行
-
-配置好 服务地址、Provisioning Profile 、Signing Certificate ，直接 run 运行项目
-
-## SDK Demo生成和运行
+## Run
+After configuring the Service URL, Provisioning Profile, and Signing Certificate, directly run the project.
 
 # License
+This project is open-source under the Apache License, Version 2.0. Use the source code within the constraints of this license.  
+The code is intended for learning and research purposes only. We are not liable for any consequences arising from the use of this code.  
+Contact us for commercial support.
 
-本项目基于 Apache License, Version 2.0 开源，请在开源协议约束范围内使用源代码。
-本项目代码仅用于学习和研究使用。 任何使用本代码产生的后果，我们不承担任何法律责任。
-请联系我们获取商业支持。
